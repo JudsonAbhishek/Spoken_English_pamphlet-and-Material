@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moses' Institute - Classic Pamphlet Layout</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@400;600;700;800&family=Tiro+Telugu:ital@0;1&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --dark-navy: #001f3f;
+            --gold-accent: #B8860B;
+            /* Dark Goldenrod */
+            --light-gold: #f9f5eb;
+            --white: #ffffff;
+            --text-main: #111;
+        }
+
+        body {
+            background: #cbd5e1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            color: var(--text-main);
+        }
+
+        /* Print A4 Styling */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+
+            .page {
+                box-shadow: none;
+                margin: 0;
+                page-break-after: always;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        /* Classic Ornamental Border */
+        .border-outer {
+            position: absolute;
+            top: 10mm;
+            bottom: 10mm;
+            left: 10mm;
+            right: 10mm;
+            border: 2px solid var(--dark-navy);
+            padding: 4px;
+        }
+
+        .border-inner {
+            border: 1px solid var(--dark-navy);
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .classic-header {
+            text-align: center;
+            padding: 25px 20px 5px 20px;
+            /* Increased top padding to avoid overlap */
+            border-bottom: 2px solid var(--gold-accent);
+            background: var(--light-gold);
+            position: relative;
+        }
+
+        .classic-header h4 {
+            font-family: 'Crimson Text', serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: 0 0 5px 0;
+            color: #b82d2d;
+            text-transform: uppercase;
+        }
+
+        .classic-header h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: 40px;
+            /* Slightly reduced to ensure it fits perfectly */
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin: 5px 0;
+            line-height: 1;
+        }
+
+        .classic-header .sub-quote {
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            font-size: 18px;
+            color: var(--gold-accent);
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
+        .header-phones {
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--dark-navy);
+            background: rgba(249, 245, 235, 0.95);
+            padding: 5px 10px;
+            border-bottom: 1px dashed var(--gold-accent);
+            border-left: 1px dashed var(--gold-accent);
+            border-radius: 0 0 0 8px;
+            z-index: 10;
+        }
+
+        .header-phones div {
+            margin: 2px 0;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .header-phones span {
+            color: #b82d2d;
+            font-size: 13px;
+        }
+
+        .contact-strip {
+            background: var(--dark-navy);
+            color: var(--white);
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Two Column Body */
+        .body-content {
+            display: flex;
+            flex-direction: row;
+            padding: 15px;
+            gap: 15px;
+            flex-grow: 1;
+        }
+
+        .col-left {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-right: 1px dotted var(--dark-navy);
+            padding-right: 20px;
+        }
+
+        .col-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            background: var(--dark-navy);
+            text-align: center;
+            padding: 6px;
+            margin: 0;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: var(--gold-accent);
+        }
+
+        /* Directors Profile */
+        .director-profile {
+            text-align: left;
+            padding-bottom: 8px;
+            border-bottom: 2px dashed #ddd;
+        }
+
+        .img-wrapper {
+            width: 130px;
+            height: 140px;
+            margin: 0 auto;
+            border: 3px double var(--gold-accent);
+            border-radius: 4px;
+            padding: 3px;
+            background: var(--white);
+        }
+
+        .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            /* Keeps the face clearly visible */
+        }
+
+        .director-profile h2 {
+            font-family: 'Crimson Text', serif;
+            color: var(--dark-navy);
+            font-size: 26px;
+            margin: 5px 0 2px 0;
+        }
+
+        .director-profile p.degrees {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--gold-accent);
+            margin: 0 0 5px 0;
+            letter-spacing: 1px;
+        }
+
+        .director-profile p.desc {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+            font-size: 13.5px;
+            line-height: 1.45;
+            text-align: justify;
+            margin: 0;
+            color: #222;
+        }
+
+        /* Topics Box */
+        .topics-wrapper {
+            background: var(--light-gold);
+            padding: 15px;
+            border: 1px solid var(--gold-accent);
+        }
+
+        .topics-wrapper .section-title {
+            background: none;
+            color: var(--dark-navy);
+            border-bottom: 2px solid var(--dark-navy);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .topics-wrapper .section-title::after {
+            display: none;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--text-main);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 10px;
+        }
+
+        .topic-list li {
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.3;
+        }
+
+        .topic-list li::before {
+            content: "✦";
+            color: var(--gold-accent);
+            position: absolute;
+            left: 0;
+            top: -1px;
+            font-size: 14px;
+        }
+
+        /* Useful For Box */
+        .useful-for {
+            padding: 0;
+        }
+
+        .useful-list {
+            padding: 8px 10px 8px 25px;
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.4;
+            background: #f4f6f9;
+            border: 1px solid #ddd;
+        }
+
+        .useful-list li {
+            margin-bottom: 3px;
+        }
+
+        .useful-list li strong {
+            color: var(--dark-navy);
+            font-family: 'Crimson Text', serif;
+            font-size: 15px;
+        }
+
+        /* Badges & Highlights */
+        .starburst-container {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .starburst {
+            background: var(--gold-accent);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            width: 140px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Crimson Text', serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .batch-box {
+            border: 2px solid var(--dark-navy);
+            text-align: center;
+            padding: 15px;
+            background: white;
+            box-shadow: 4px 4px 0 var(--gold-accent);
+        }
+
+        .batch-box h3 {
+            margin: 0 0 10px 0;
+            color: var(--dark-navy);
+            font-family: 'Crimson Text', serif;
+            font-size: 22px;
+        }
+
+        .batch-box p {
+            margin: 5px 0;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* Page 2 Specifics */
+        .banner-quote {
+            text-align: center;
+            font-family: 'Crimson Text', serif;
+            font-size: 24px;
+            font-style: italic;
+            font-weight: 700;
+            color: var(--dark-navy);
+            padding: 20px;
+            background: var(--light-gold);
+            border-bottom: 2px double var(--gold-accent);
+        }
+
+        .spec-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 27px;
+            margin-bottom: 5px;
+        }
+
+        .spec-box {
+            padding: 4px 12px;
+            border-left: 5px solid var(--dark-navy);
+            background: #fbfbfb;
+        }
+
+        .spec-box h3 {
+            margin: 0 0 5px 0;
+            color: var(--dark-navy);
+            font-family: 'Crimson Text', serif;
+            font-size: 20px;
+        }
+
+        .spec-box ul {
+            padding-left: 20px;
+            margin: 0;
+            font-size: 13.5px;
+            line-height: 1.6;
+        }
+
+        .achievement-bar {
+            background: var(--dark-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 25px;
+            margin: auto 0;
+        }
+
+        .achievement-bar h2 {
+            font-family: 'Crimson Text', serif;
+            color: var(--gold-accent);
+            margin: 0 0 5px 0;
+            font-size: 28px;
+        }
+
+        .achievement-bar p {
+            margin: 5px 0;
+            font-size: 15px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="no-print" style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
+        <button onclick="window.print()"
+            style="background: var(--dark-navy); color: var(--gold-accent); border: 2px solid var(--gold-accent); padding: 12px 24px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; border-radius: 50px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.4); transition: transform 0.2s;"
+            onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            📥 Download as PDF
+        </button>
+    </div>
+
+    <!-- PAGE 1 (FRONT) -->
+    <div class="page">
+        <div class="border-outer">
+            <div class="border-inner">
+
+                <div class="classic-header">
+                    <div class="header-phones">
+                        <div><span>📞</span> 99631 78535</div>
+                        <div><span>📞</span> 83090 92629</div>
+                    </div>
+                    <h4>Moses' Institute Of</h4>
+                    <h1>SPOKEN ENGLISH & GRAMMAR</h1>
+                    <div class="sub-quote">A Great Turning Point to Your Life</div>
+                </div>
+
+                <div class="contact-strip"
+                    style="flex-direction: column; align-items: center; gap: 4px; padding: 6px 15px; font-size: 11.5px; line-height: 1.4;">
+                    <span style="text-align: center;">📍 Beside YUVARAJ (SAILAJA) Theatre, Swarajya Nagar, Near TRR
+                        Ground, KANDUKUR</span>
+                    <span style="color: var(--gold-accent);">📞 99631 78535 | 83090 92629 | 93925 62274</span>
+                </div>
+
+                <div class="body-content">
+
+                    <!-- LEFT COLUMN -->
+                    <div class="col-left">
+                        <div class="director-profile">
+                            <div class="img-wrapper">
+                                <img src="Moses_profile.png" alt="M. Moses">
+                            </div>
+                            <div
+                                style="display: flex; justify-content: center; align-items: baseline; gap: 10px; margin: 8px 0 4px 0;">
+                                <span
+                                    style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 800; color: #b82d2d; text-transform: uppercase; letter-spacing: 1px;">YOUR
+                                    DIRECTOR</span>
+                                <h2 style="margin: 0;">M. MOSES</h2>
+                            </div>
+                            <p class="degrees" style="text-align: center;">D.C.E, B.A.(Lit), M.A.(Lit),
+                                M.A.(Pol.Science), B.Ed.</p>
+                            <p class="desc">
+                                With more than 20 years of experience in teaching English and running spoken English
+                                institute, Mr. Moses leads the institute with a dedication to empower individuals
+                                through
+                                mastery of the language. His distinctive teaching methodology emphasizes consistent
+                                practice and active inquiry, enabling students to build confidence, achieve fluency in
+                                English, and develop a strong command of grammar.
+                            </p>
+
+                            <p class="desc" style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ccc;">
+                                <strong>M. Sukanya, M.A., B.Ed.</strong>, is a School Assistant in English and the wife
+                                of Mr. M. Moses. With more than 15 years of teaching experience in English, she is
+                                dedicated to providing personalized care and strong academic support to every student,
+                                ensuring excellent results.
+                            </p>
+                        </div>
+
+                        <div class="useful-for">
+                            <h3 class="section-title">English Useful To</h3>
+                            <ul class="useful-list">
+                                <li><strong>High School, Inter, Degree and P.G</strong> students to excel in studies.
+                                </li>
+                                <li><strong>MBA, MCA, B.Tech, M.Tech</strong> students for campus selections.</li>
+                                <li><strong>Competitive Exam</strong> aspirants (TTC, B.Ed, ICET, DSC, Banking,
+                                    Railways).</li>
+                                <li><strong>Professionals & Entrepreneurs</strong> enhancing communication skills.</li>
+                                <li><strong>Parents</strong> guiding children in academic development.</li>
+                                <li><strong>Employees</strong> for promotion in jobs</li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN -->
+                    <div class="col-right">
+
+                        <div
+                            style="border: 2px solid var(--dark-navy); text-align: center; padding: 12px 5px; background: #fffcf5; margin-bottom: 15px; box-shadow: 3px 3px 0 var(--gold-accent);">
+                            <h3
+                                style="margin: 0 0 10px 0; color: var(--dark-navy); font-family: 'Crimson Text', serif; font-size: 18px; text-transform: uppercase;">
+                                ☀️ Summer Batches & Timings</h3>
+                            <div style="border-top: 1px dashed var(--gold-accent); margin: 8px 10px;"></div>
+                            <p style="margin: 4px 0; font-size: 13px; color: var(--text-main); white-space: nowrap;">
+                                <strong>Morning Batch 1 :</strong> 7:00 AM to 8:30 AM
+                            </p>
+                            <p style="margin: 4px 0; font-size: 13px; color: var(--text-main); white-space: nowrap;">
+                                <strong>Morning Batch 2 :</strong> 9:00 AM to 10:30 AM
+                            </p>
+                            <p style="margin: 4px 0; font-size: 13px; color: var(--text-main); white-space: nowrap;">
+                                <strong>Evening Batch :</strong> 4:30 PM to 6:00 PM
+                            </p>
+                            <div style="border-top: 1px dashed var(--gold-accent); margin: 6px 10px 4px 10px;"></div>
+                            <p style="margin: 4px 0; font-size: 11px; font-weight: 700; color: #b82d2d;">
+                                <strong>Note:</strong> (Not only summer, throughout the year)
+                            </p>
+                        </div>
+
+                        <div class="topics-wrapper">
+                            <h3 class="section-title">Our Teaching Topics</h3>
+                            <ul class="topic-list">
+                                <li>All Tenses (In depth)</li>
+                                <li>Parts of Speech</li>
+                                <li>Conjugation (Verb forms)</li>
+                                <li>Active & Passive Voice</li>
+                                <li>Direct & Indirect Speech</li>
+                                <li>Antonyms & Synonyms</li>
+                                <li>If Clauses (Conditional)</li>
+                                <li>Articles</li>
+                                <li>Common Expressions</li>
+                                <li>Degrees of Comparison</li>
+                                <li>Question Tags</li>
+                                <li>Prepositions</li>
+                                <li>Subject-Verb Agreement</li>
+                                <li>Phrasal Verbs</li>
+                                <li>Phonetics</li>
+                                <li>Syllables</li>
+                                <li>Order of Adjectives</li>
+                                <li>Modals (Modal Verbs)</li>
+                                <li>Sentences Formats</li>
+                                <li>Correction of sentences</li>
+                            </ul>
+                        </div>
+
+                        <div
+                            style="text-align: center; margin: auto 0; padding: 8px 10px; font-size: 14px; font-weight: 700; font-style: italic; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; color: var(--dark-navy);">
+                            "Everyone has a will to speak good English, but very few have the will to make sincere &
+                            serious efforts to speak"
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PAGE 2 (BACK) -->
+    <div class="page">
+        <div class="border-outer">
+            <div class="border-inner" style="background: var(--white);">
+
+                <div class="classic-header">
+                    <div class="header-phones">
+                        <div><span>📞</span> 99631 78535</div>
+                        <div><span>📞</span> 83090 92629</div>
+                    </div>
+                    <h4>Moses' Institute Of</h4>
+                    <h1>SPOKEN ENGLISH & GRAMMAR</h1>
+                    <div class="sub-quote">A Great Turning Point to Your Life</div>
+                </div>
+
+                <div class="contact-strip"
+                    style="flex-direction: column; align-items: center; gap: 4px; padding: 6px 15px; font-size: 11.5px; line-height: 1.4;">
+                    <span style="text-align: center;">📍 Beside YUVARAJ (SAILAJA) Theatre, Swarajya Nagar, Near TRR
+                        Ground, KANDUKUR</span>
+                    <span style="color: var(--gold-accent);">📞 99631 78535 | 83090 92629 | 93925 62274</span>
+                </div>
+
+                <div class="body-content" style="flex-direction: column; gap: 8px; padding: 10px 15px;">
+
+                    <div>
+                        <h3 class="section-title" style="margin-bottom: 15px;">Institute Specialities</h3>
+
+                        <div class="spec-container">
+                            <div class="spec-box">
+                                <h3>Modern Facilities</h3>
+                                <ul>
+                                    <li>Comfortable Sitting Chairs</li>
+                                    <li>Pure Mineral Water</li>
+                                    <li>Professional Environment</li>
+                                    <li>Clean & Maintained Restrooms</li>
+                                </ul>
+                            </div>
+
+                            <div class="spec-box">
+                                <h3>Proven Methods</h3>
+                                <ul>
+                                    <li>Small Batches (20-25 students)</li>
+                                    <li>Daily Conversation Practice</li>
+                                    <li>Focus on 1000+ Verbs</li>
+                                    <li>Correct Pronunciation Focus</li>
+                                </ul>
+                            </div>
+
+                            <div class="spec-box">
+                                <h3>Inclusive Training</h3>
+                                <ul>
+                                    <li>Personality Development</li>
+                                    <li>Building Professional Confidence </li>
+                                    <li>Focus on Proverbs & Quotations </li>
+                                    <li>Enhancing Vocabulary</li>
+                                </ul>
+                            </div>
+
+                            <div class="spec-box" style="border-left-color: var(--gold-accent);">
+                                <h3>Why Choose Us?</h3>
+                                <ul style="list-style-type: square;">
+                                    <li><strong>Ultimate Care:</strong> Personalized attention.</li>
+                                    <li><strong>Small Batches:</strong> Limited to 20-25 students.</li>
+                                    <li><strong>Excellent Results:</strong> Proven track record.</li>
+                                    <li><strong>Practical:</strong> Regular conversation focus.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <div
+                            style="flex: 1; border: 2px solid var(--dark-navy); padding: 6px; background: white; box-shadow: 4px 4px 0 var(--gold-accent); font-family: 'Tiro Telugu', serif; display: flex; flex-direction: column; justify-content: center;">
+                            <h3
+                                style="color: var(--dark-navy); margin: 0 0 10px 0; font-size: 18px; text-align: center;">
+                                ఎవరు నేర్చుకోవచ్చు?</h3>
+                            <ul
+                                style="margin: 0; padding-left: 20px; font-size: 14.5px; line-height: 1.6; color: var(--text-main);">
+                                <li style="margin-bottom: 5px;">3వ తరగతి నుండి 10వ తరగతి వరకు, ఇంటర్, డిగ్రీ, B.Tech
+                                    మరియు ఉన్నత చదువులు చదివే విద్యార్థులకు.</li>
+                                <li style="margin-bottom: 5px;">ఉద్యోగులు, నిరుద్యోగులు మరియు గృహిణులు.</li>
+                                <li>గ్రామీణ మరియు తెలుగు మీడియం వారికి బేసిక్స్ నుండి శిక్షణ.</li>
+                                <li>ఇంగ్లీష్ మాట్లాడటంలో భయం మరియు తడబాటు ఉన్న వారికి.</li>
+                            </ul>
+                        </div>
+
+                        <div
+                            style="flex: 1.5; background: #fdfaf4; border: 2px solid var(--dark-navy); padding: 6px; font-family: 'Tiro Telugu', serif;">
+                            <h3
+                                style="color: #b82d2d; margin: 0 0 10px 0; font-size: 18px; text-align: center; font-family: 'Tiro Telugu', serif;">
+                                తల్లిదండ్రులకు మరియు విద్యార్థులకు గమనిక</h3>
+                            <ul
+                                style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 1.6; color: var(--dark-navy);">
+                                <li style="margin-bottom: 5px;"><strong>ఇంగ్లీష్ భయం వద్దు:</strong> తెలుగు మీడియం
+                                    విద్యార్థులకు సులభంగా అర్థమయ్యే రీతిలో బోధన.</li>
+                                <li style="margin-bottom: 5px;"><strong>ఉద్యోగ అవకాశాలు:</strong> కాంపిటేటివ్ ఎగ్జామ్స్
+                                    మరియు ఇంటర్వ్యూలలో విజయం సాధించేలా ప్రత్యేక తర్ఫీదు.</li>
+                                <li><strong>వ్యాకరణం (Grammar):</strong> సులభమైన పద్ధతిలో, జీవితాంతం గుర్తుండేలా
+                                    నేర్పుతాము.</li>
+                                <li><strong>స్పష్టమైన మార్పు:</strong> తల్లిదండ్రులు తమ పిల్లల్లో కమ్యూనికేషన్
+                                    నైపుణ్యాలు మరియు ఆత్మవిశ్వాసంలో స్పష్టమైన మెరుగుదల చూడగలరు.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div
+                        style="text-align: center; margin: 15px 0 10px 0; padding: 2px 20px; font-family: 'Crimson Text', serif; font-size: 20px; font-style: italic; font-weight: 700; color: #b82d2d;">
+                        <strong>"Knowledge of English is the key that opens doors to endless opportunities."</strong>
+                    </div>
+                </div>
+
+                <div class="achievement-bar"
+                    style="display: flex; align-items: center; justify-content: space-between; padding: 5px 20px; box-sizing: border-box; width: 100%;">
+                    <div style="flex: 0.8;"></div>
+                    <div style="flex: 4; text-align: center;">
+                        <h2 style="margin: 0 0 2px 0;">🏆 Our Achievements</h2>
+                        <p style="margin: 0; font-size: 13px; line-height: 1.3;">Successfully trained over 5,000 students, as well as numerous teachers and
+                            employees in other fields, achieving 200+ selections in Banking, Railways, and various
+                            sectors.</p>
+                    </div>
+                    <div
+                        style="flex: 1; display: flex; flex-direction: column; align-items: flex-end; justify-content: center;">
+                        <img src="QR Code_of address.png" alt="Institute Location QR"
+                            style="width: 75px; height: 75px; border: 2px solid white; border-radius: 4px; padding: 2px; background: white;">
+                        <p
+                            style="font-size: 10px; margin: 4px 0 0 0; text-transform: uppercase; font-weight: 700; color: var(--white); text-align: center; width: 79px; line-height: 1.1;">
+                            Institute<br>Location</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

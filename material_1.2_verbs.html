@@ -1,0 +1,3543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moses' Institute - List of Irregular Verbs</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@400;600;700;800&family=Tiro+Telugu:ital@0;1&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --dark-navy: #000;
+            --gold-accent: #222;
+            --light-gold: #fff;
+            --white: #ffffff;
+            --text-main: #000;
+        }
+
+        body {
+            background: #cbd5e1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            color: var(--text-main);
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            padding: 8mm 10mm;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            page-break-after: always;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+
+            .page {
+                box-shadow: none;
+                margin: 0;
+                page-break-after: always;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        .classic-header {
+            text-align: center;
+            padding: 8px;
+            border: 2px solid var(--dark-navy);
+            background: var(--light-gold);
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .classic-header h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin: 0;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .list-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #b82d2d;
+            letter-spacing: 2px;
+            margin: 4px 0 2px 0;
+            text-transform: uppercase;
+        }
+
+        .section-divider {
+            border: 0;
+            border-top: 1px solid var(--dark-navy);
+            margin: 10px 0;
+        }
+
+        .classic-header .sub-quote {
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            font-size: 11px;
+            color: var(--gold-accent);
+            margin: 2px 0;
+            font-weight: 600;
+        }
+
+        .header-phones {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            text-align: right;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--dark-navy);
+            font-variant-numeric: tabular-nums;
+            line-height: 1.2;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+            flex-grow: 1;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 1px 4px;
+            text-align: left;
+            font-size: 12px;
+            line-height: 1.1;
+        }
+
+        th {
+            background: var(--dark-navy);
+            color: var(--white);
+            font-family: 'Crimson Text', serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 3px 4px;
+        }
+
+        .num-col {
+            width: 25px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .verb-cell {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .english-text {
+            font-weight: 600;
+        }
+
+        .telugu-pron {
+            font-family: 'Tiro Telugu', serif;
+            font-size: 11px;
+            color: #000;
+            margin-left: 3px;
+            font-weight: 700;
+        }
+
+        .telugu-meaning {
+            font-family: 'Tiro Telugu', serif;
+            font-size: 12px;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .page-number {
+            text-align: center;
+            font-size: 11px;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+
+        /* Watermark */
+        .page::before,
+        .page::after {
+            content: "Moses' Institute of SPOKEN ENGLISH";
+            position: absolute;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 38px;
+            color: rgba(0, 0, 0, 0.18);
+            transform: rotate(-30deg);
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 0;
+            width: 100%;
+            text-align: center;
+            left: 0;
+        }
+
+        .page::before {
+            top: 30%;
+        }
+
+        .page::after {
+            top: 73%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="no-print" style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
+        <button onclick="window.print()"
+            style="background: var(--dark-navy); color: var(--gold-accent); border: 2px solid var(--gold-accent); padding: 12px 24px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; border-radius: 50px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.4); transition: transform 0.2s;"
+            onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            📥 Download / Print
+        </button>
+    </div>
+
+    <!-- PAGE 1 -->
+    <div class="page">
+        <div class="classic-header">
+            <div class="header-phones">
+                <div>9963178535</div>
+                <div>8309092629</div>
+                <div>9392562274</div>
+            </div>
+            <h1>Moses' Institute of SPOKEN ENGLISH</h1>
+            <div class="sub-quote">Beside YUVARAJ (SAILAJA) Theatre, Swarajya Nagar, Near TRR Ground, KANDUKUR</div>
+        </div>
+        <div style="text-align:center; font-weight:700; font-size:13px; margin:10px 0;">
+            LIST OF IRREGULAR VERBS
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="num-col">No.</th>
+                    <th>Present Tense (V<sub>1</sub>)</th>
+                    <th>Past Tense (V<sub>2</sub>)</th>
+                    <th>Past Participle (V<sub>3</sub>)</th>
+                    <th>Telugu Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="num-col">1</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Abide</span><span
+                                class="telugu-pron">అబైడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">abode</span><span
+                                class="telugu-pron">అబోడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">abode</span><span
+                                class="telugu-pron">అబోడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కట్టుబడి యుండుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">2</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Arise</span><span
+                                class="telugu-pron">అరైజ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">arose</span><span
+                                class="telugu-pron">అరోజ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">arisen</span><span
+                                class="telugu-pron">అరైజెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">లేచుట, ఉద్భవించుట, సంభవించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">3</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Awake</span><span
+                                class="telugu-pron">అవేక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">awoke</span><span
+                                class="telugu-pron">అవోక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">awoken</span><span
+                                class="telugu-pron">అవోకెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మేల్కొనుట, నిద్రలేపుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">4</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Be</span><span class="telugu-pron">బీ</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">was/were</span><span
+                                class="telugu-pron">వాజ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">been</span><span
+                                class="telugu-pron">బీన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">అగుట, ఉండుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">5</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Bear</span><span
+                                class="telugu-pron">బేర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bore</span><span
+                                class="telugu-pron">బోర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">born/borne</span><span
+                                class="telugu-pron">బోర్న్</span></div>
+                    </td>
+                    <td class="telugu-meaning">భరించుట, భారంమోయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">6</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Beat</span><span
+                                class="telugu-pron">బీట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">beat</span><span
+                                class="telugu-pron">బీట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">beaten</span><span
+                                class="telugu-pron">బీటెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">బాదుట, కొట్టు (కొను)ట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">7</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Become</span><span
+                                class="telugu-pron">బికమ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">became</span><span
+                                class="telugu-pron">బికేమ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">become</span><span
+                                class="telugu-pron">బికమ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">అగుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">8</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Befall</span><span
+                                class="telugu-pron">బిఫాల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">befell</span><span
+                                class="telugu-pron">బిఫెల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">befallen</span><span
+                                class="telugu-pron">బిఫాలెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">సంభవించుట, కలుగుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">9</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Beget</span><span
+                                class="telugu-pron">బిగెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">begot</span><span
+                                class="telugu-pron">బిగాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">begotten</span><span
+                                class="telugu-pron">బిగాటెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కనుట, కారకమగుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">10</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Begin</span><span
+                                class="telugu-pron">బిగిన్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">began</span><span
+                                class="telugu-pron">బిగాన్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">begun</span><span
+                                class="telugu-pron">బిగన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ప్రారంభించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">11</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Behold</span><span
+                                class="telugu-pron">బిహోల్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">beheld</span><span
+                                class="telugu-pron">బిహెల్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">beheld</span><span
+                                class="telugu-pron">బిహెల్డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చూచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">12</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Bend</span><span
+                                class="telugu-pron">బెండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bent</span><span
+                                class="telugu-pron">బెంట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bent</span><span
+                                class="telugu-pron">బెంట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వంచుట, వంగుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">13</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Bereave</span><span
+                                class="telugu-pron">బిరీవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bereaved</span><span
+                                class="telugu-pron">బిరీవ్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bereaved</span><span
+                                class="telugu-pron">బిరీవ్డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">నష్టపరచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">14</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Beseech</span><span
+                                class="telugu-pron">బిసీచ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">besought</span><span
+                                class="telugu-pron">బిసాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">besought</span><span
+                                class="telugu-pron">బిసాట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">బ్రతిమాలుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">15</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Beset</span><span
+                                class="telugu-pron">బిసెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">beset</span><span
+                                class="telugu-pron">బిసెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">beset</span><span
+                                class="telugu-pron">బిసెట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చుట్టుముట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">16</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Bet</span><span
+                                class="telugu-pron">బెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bet/betted</span><span
+                                class="telugu-pron">బెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bet/betted</span><span
+                                class="telugu-pron">బెట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పందెంకాయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">17</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Betake</span><span
+                                class="telugu-pron">బితేక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">betook</span><span
+                                class="telugu-pron">బితూక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">betaken</span><span
+                                class="telugu-pron">బితేకెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">లగ్నంచేయుట, వెడలుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">18</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Bid</span><span
+                                class="telugu-pron">బిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bade</span><span
+                                class="telugu-pron">బేడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bidden</span><span
+                                class="telugu-pron">బిడెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఆజ్ఞాపించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">19</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Bid</span><span
+                                class="telugu-pron">బిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bid</span><span
+                                class="telugu-pron">బిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bid</span><span
+                                class="telugu-pron">బిడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వేలంపాడట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">20</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Bind</span><span
+                                class="telugu-pron">బైండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bound</span><span
+                                class="telugu-pron">బౌండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bound</span><span
+                                class="telugu-pron">బౌండ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">బాండ్ చేయుట, నిర్బంధించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">21</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Bite</span><span
+                                class="telugu-pron">బైట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bit</span><span
+                                class="telugu-pron">బిట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bitten</span><span
+                                class="telugu-pron">బిటెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కరుచుట, కొరుకుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">22</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Bleed</span><span
+                                class="telugu-pron">బ్లీడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bled</span><span
+                                class="telugu-pron">బ్లెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bled</span><span
+                                class="telugu-pron">బ్లెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">రక్తంకారుట, రక్తంచిమ్ముట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">23</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Blow</span><span
+                                class="telugu-pron">బ్లో</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">blew</span><span
+                                class="telugu-pron">బ్లూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">blown</span><span
+                                class="telugu-pron">బ్లోన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">గాలివీచుట, గాలిఊదుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">24</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Break</span><span
+                                class="telugu-pron">బ్రేక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">broke</span><span
+                                class="telugu-pron">బ్రోక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">broken</span><span
+                                class="telugu-pron">బ్రోకెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పగులుట, పగులగొట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">25</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Breed</span><span
+                                class="telugu-pron">బ్రీడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bred</span><span
+                                class="telugu-pron">బ్రెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bred</span><span
+                                class="telugu-pron">బ్రెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మేపుట, పెంచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">26</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Bring</span><span
+                                class="telugu-pron">బ్రింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">brought</span><span
+                                class="telugu-pron">బ్రాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">brought</span><span
+                                class="telugu-pron">బ్రాట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తెచ్చుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">27</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Broadcast</span><span
+                                class="telugu-pron">బ్రాడ్‌కాస్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">broadcast</span><span
+                                class="telugu-pron">బ్రాడ్‌కాస్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">broadcast</span><span
+                                class="telugu-pron">బ్రాడ్‌కాస్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ప్రసారం చేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">28</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Build</span><span
+                                class="telugu-pron">బిల్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">built</span><span
+                                class="telugu-pron">బిల్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">built</span><span
+                                class="telugu-pron">బిల్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">నిర్మించుట, కట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">29</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Burn</span><span
+                                class="telugu-pron">బర్న్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">burnt/burned</span><span
+                                class="telugu-pron">బరంట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">burnt/burned</span><span
+                                class="telugu-pron">బరంట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మండుట, కాల్చుట, కాలుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">30</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Burst</span><span
+                                class="telugu-pron">బర్స్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">burst</span><span
+                                class="telugu-pron">బర్స్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">burst</span><span
+                                class="telugu-pron">బర్స్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">బద్దలగుట, పగులగొట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">31</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Buy</span><span class="telugu-pron">బై</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bought</span><span
+                                class="telugu-pron">బాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">bought</span><span
+                                class="telugu-pron">బాట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">32</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Cast</span><span
+                                class="telugu-pron">కాస్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">cast</span><span
+                                class="telugu-pron">కాస్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">cast</span><span
+                                class="telugu-pron">కాస్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">రువ్వుట, పోతపోయిట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">33</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Catch</span><span
+                                class="telugu-pron">క్యాచ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">caught</span><span
+                                class="telugu-pron">కాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">caught</span><span
+                                class="telugu-pron">కాట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పట్టుకొనుట, అంటుట, సోకుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">34</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Chide</span><span
+                                class="telugu-pron">చైడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">chid</span><span
+                                class="telugu-pron">చిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">chidden</span><span
+                                class="telugu-pron">చిడెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తిట్టుట, మందలించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">35</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Choose</span><span
+                                class="telugu-pron">చూజ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">chose</span><span
+                                class="telugu-pron">చోజ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">chosen</span><span
+                                class="telugu-pron">చోజెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఎంచుకొనుట, ఎన్నుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">36</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Cleave</span><span
+                                class="telugu-pron">క్లీవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">clove/cleft</span><span
+                                class="telugu-pron">క్లోవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">cloven/cleft</span><span
+                                class="telugu-pron">క్లోవెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చీల్చుట, పగులగొట్టుట</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="page-number">1</div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page">
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="num-col">No.</th>
+                    <th>Present Tense (V<sub>1</sub>)</th>
+                    <th>Past Tense (V<sub>2</sub>)</th>
+                    <th>Past Participle (V<sub>3</sub>)</th>
+                    <th>Telugu Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="num-col">37</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Cling</span><span
+                                class="telugu-pron">క్లింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">clung</span><span
+                                class="telugu-pron">క్లంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">clung</span><span
+                                class="telugu-pron">క్లంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">అంటియుండుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">38</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Clothe</span><span
+                                class="telugu-pron">క్లోత్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">clothed/clad</span><span
+                                class="telugu-pron">క్లోత్‌డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">clothed/clad</span><span
+                                class="telugu-pron">క్లోత్‌డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">దుస్తులు ధరించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">39</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Come</span><span
+                                class="telugu-pron">కమ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">came</span><span
+                                class="telugu-pron">కేమ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">come</span><span
+                                class="telugu-pron">కమ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వచ్చుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">40</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Cost</span><span
+                                class="telugu-pron">కాస్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">cost</span><span
+                                class="telugu-pron">కాస్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">cost</span><span
+                                class="telugu-pron">కాస్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఖరీదగుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">41</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Creep</span><span
+                                class="telugu-pron">క్రీప్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">crept</span><span
+                                class="telugu-pron">క్రెప్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">crept</span><span
+                                class="telugu-pron">క్రెప్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ప్రాకుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">42</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Crow</span><span
+                                class="telugu-pron">క్రో</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">crew/crowed</span><span
+                                class="telugu-pron">క్రూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">crowed</span><span
+                                class="telugu-pron">క్రోడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కాకిలాగా పెద్దగా అరచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">43</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Cut</span><span class="telugu-pron">కట్</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">cut</span><span class="telugu-pron">కట్</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">cut</span><span class="telugu-pron">కట్</span>
+                        </div>
+                    </td>
+                    <td class="telugu-meaning">కోయుట, తెగుట, నరుకుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">44</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Dare</span><span
+                                class="telugu-pron">డేర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">dared/durst</span><span
+                                class="telugu-pron">డేర్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">dared</span><span
+                                class="telugu-pron">డేర్డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ధైర్యముచేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">45</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Deal</span><span
+                                class="telugu-pron">డీల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">dealt</span><span
+                                class="telugu-pron">డెల్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">dealt</span><span
+                                class="telugu-pron">డెల్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">నిర్వహించుట, అమ్ముట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">46</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Dig</span><span
+                                class="telugu-pron">డిగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">dug</span><span class="telugu-pron">డగ్</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">dug</span><span class="telugu-pron">డగ్</span>
+                        </div>
+                    </td>
+                    <td class="telugu-meaning">తవ్వుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">47</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Do</span><span class="telugu-pron">డు</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">did</span><span
+                                class="telugu-pron">డిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">done</span><span
+                                class="telugu-pron">డన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చేయుట, నిర్వహించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">48</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Draw</span><span
+                                class="telugu-pron">డ్రా</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">drew</span><span
+                                class="telugu-pron">డ్రూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">drawn</span><span
+                                class="telugu-pron">డ్రాన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">గీయుట, ఈడ్చుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">49</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Dream</span><span
+                                class="telugu-pron">డ్రీమ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">dreamt/dreamed</span><span
+                                class="telugu-pron">డ్రెమ్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">dreamt/dreamed</span><span
+                                class="telugu-pron">డ్రెమ్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కలగనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">50</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Drink</span><span
+                                class="telugu-pron">డ్రింక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">drank</span><span
+                                class="telugu-pron">డ్రాంక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">drunk</span><span
+                                class="telugu-pron">డ్రంక్</span></div>
+                    </td>
+                    <td class="telugu-meaning">త్రాగుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">51</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Drive</span><span
+                                class="telugu-pron">డ్రైవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">drove</span><span
+                                class="telugu-pron">డ్రోవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">driven</span><span
+                                class="telugu-pron">రివెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">నడుపుట, తరుముట, తోలుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">52</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Dwell</span><span
+                                class="telugu-pron">డ్వెల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">dwelt/dwelled</span><span
+                                class="telugu-pron">డ్వెల్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">dwelt/dwelled</span><span
+                                class="telugu-pron">డ్వెల్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">నివసించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">53</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Eat</span><span class="telugu-pron">ఈట్</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">ate</span><span class="telugu-pron">ఎట్</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">eaten</span><span
+                                class="telugu-pron">ఈటెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తినుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">54</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Fall</span><span
+                                class="telugu-pron">ఫాల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">fell</span><span
+                                class="telugu-pron">ఫెల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">fallen</span><span
+                                class="telugu-pron">ఫాలెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పడుట, రాలుట, పూలుట, తగ్గుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">55</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Feed</span><span
+                                class="telugu-pron">ఫీడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">fed</span><span
+                                class="telugu-pron">ఫెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">fed</span><span
+                                class="telugu-pron">ఫెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తినిపించుట, మేపుట, తినిపించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">56</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Feel</span><span
+                                class="telugu-pron">ఫీల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">felt</span><span
+                                class="telugu-pron">ఫెల్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">felt</span><span
+                                class="telugu-pron">ఫెల్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">భావించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">57</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Fight</span><span
+                                class="telugu-pron">ఫైట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">fought</span><span
+                                class="telugu-pron">ఫాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">fought</span><span
+                                class="telugu-pron">ఫాట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పోరాడుట, కలబడుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">58</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Find</span><span
+                                class="telugu-pron">ఫైండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">found</span><span
+                                class="telugu-pron">ఫౌండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">found</span><span
+                                class="telugu-pron">ఫౌండ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కనుగొనుట, చూచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">59</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Flee</span><span
+                                class="telugu-pron">ఫ్లీ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">fled</span><span
+                                class="telugu-pron">ఫ్లెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">fled</span><span
+                                class="telugu-pron">ఫ్లెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పారిపోవుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">60</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Fling</span><span
+                                class="telugu-pron">ఫ్లింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">flung</span><span
+                                class="telugu-pron">ఫ్లంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">flung</span><span
+                                class="telugu-pron">ఫ్లంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">రువ్వుట, విసురుట, పారవేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">61</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Fly</span><span
+                                class="telugu-pron">ఫ్లై</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">flew</span><span
+                                class="telugu-pron">ఫ్లూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">flown</span><span
+                                class="telugu-pron">ఫ్లోన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఎగురుట, ఎగురవేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">62</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Forbear</span><span
+                                class="telugu-pron">ఫర్‌బేర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forbore</span><span
+                                class="telugu-pron">ఫర్‌బోర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forborne</span><span
+                                class="telugu-pron">ఫర్‌బోర్న్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఓర్చుట, సహించుట, విడుచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">63</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Forbid</span><span
+                                class="telugu-pron">ఫర్‌బిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forbade</span><span
+                                class="telugu-pron">ఫర్‌బెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forbidden</span><span
+                                class="telugu-pron">బిడెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కాదనుట, వద్దనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">64</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Forecast</span><span
+                                class="telugu-pron">ఫోర్‌కాస్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forecast</span><span
+                                class="telugu-pron">ఫోర్‌కాస్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forecast</span><span
+                                class="telugu-pron">ఫోర్‌కాస్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వాతావరణం చెప్పుట, జోస్యం చెప్పుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">65</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Foreknow</span><span
+                                class="telugu-pron">ఫోర్‌నో</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">foreknew</span><span
+                                class="telugu-pron">ఫోర్‌న్యూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">foreknown</span><span
+                                class="telugu-pron">ఫోర్‌నోన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ముందుగా తెలుసుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">66</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Forget</span><span
+                                class="telugu-pron">ఫర్‌గెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forgot</span><span
+                                class="telugu-pron">ఫర్‌గాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forgotten</span><span
+                                class="telugu-pron">గాటెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మరచిపోవుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">67</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Forgive</span><span
+                                class="telugu-pron">ఫర్‌గివ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forgave</span><span
+                                class="telugu-pron">ఫర్‌గేవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forgiven</span><span
+                                class="telugu-pron">గివెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">క్షమించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">68</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Forsake</span><span
+                                class="telugu-pron">ఫర్‌సేక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forsook</span><span
+                                class="telugu-pron">ఫర్‌సుక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forsaken</span><span
+                                class="telugu-pron">సేకెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వదలివేయుట, మానివేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">69</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Forswear</span><span
+                                class="telugu-pron">ఫోర్‌స్వేర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forswore</span><span
+                                class="telugu-pron">ఫోర్‌స్వోర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">forsworn</span><span
+                                class="telugu-pron">స్వోర్న్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఒట్టో ప్రమాణం చేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">70</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Freeze</span><span
+                                class="telugu-pron">ఫ్రీజ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">froze</span><span
+                                class="telugu-pron">ఫ్రోజ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">frozen</span><span
+                                class="telugu-pron">ఫ్రోజెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">గడ్డ కట్టుట, గడ్డ కట్టించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">71</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Gainsay</span><span
+                                class="telugu-pron">గెయిన్‌సే</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">gainsaid</span><span
+                                class="telugu-pron">సెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">gainsaid</span><span
+                                class="telugu-pron">సెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తిరస్కరించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">72</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Get</span><span
+                                class="telugu-pron">గెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">got</span><span
+                                class="telugu-pron">గాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">gotten/got</span><span
+                                class="telugu-pron">గాటెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పొందు సంపాదించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">73</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Gild</span><span
+                                class="telugu-pron">గిల్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">gilded/gilt</span><span
+                                class="telugu-pron">గిల్డెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">gilded/gilt</span><span
+                                class="telugu-pron">గిల్డెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">బంగారుపూతపూయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">74</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Give</span><span
+                                class="telugu-pron">గివ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">gave</span><span
+                                class="telugu-pron">గేవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">given</span><span
+                                class="telugu-pron">గివెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఇచ్చుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">75</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Gird</span><span
+                                class="telugu-pron">గిర్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">girded/girt</span><span
+                                class="telugu-pron">గిర్డెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">girded/girt</span><span
+                                class="telugu-pron">గిర్డెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">బెల్టు (లేక) కత్తి ధరించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">76</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Go</span><span class="telugu-pron">గో</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">went</span><span
+                                class="telugu-pron">వెంట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">gone</span><span
+                                class="telugu-pron">గాన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వెళ్లుట</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="page-number">2</div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="page">
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="num-col">No.</th>
+                    <th>Present Tense (V<sub>1</sub>)</th>
+                    <th>Past Tense (V<sub>2</sub>)</th>
+                    <th>Past Participle (V<sub>3</sub>)</th>
+                    <th>Telugu Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="num-col">77</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Grave</span><span
+                                class="telugu-pron">గ్రేవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">graved</span><span
+                                class="telugu-pron">గ్రేవ్‌డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">graven</span><span
+                                class="telugu-pron">గ్రేవెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చెక్కుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">78</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Grind</span><span
+                                class="telugu-pron">గ్రైండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">ground</span><span
+                                class="telugu-pron">గ్రౌండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">ground</span><span
+                                class="telugu-pron">గ్రౌండ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">రుబ్బుట, విసురుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">79</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Grow</span><span
+                                class="telugu-pron">గ్రో</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">grew</span><span
+                                class="telugu-pron">గ్రూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">grown</span><span
+                                class="telugu-pron">గ్రోన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పెరుగుట, పెంచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">80</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Hamstring</span><span
+                                class="telugu-pron">హామ్‌స్ట్రింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hamstrung</span><span
+                                class="telugu-pron">హామ్‌స్ట్రంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hamstrung</span><span
+                                class="telugu-pron">హామ్‌స్ట్రంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మోకాలు విరుచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">81</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Hang</span><span
+                                class="telugu-pron">హ్యాంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hung</span><span
+                                class="telugu-pron">హంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hung</span><span
+                                class="telugu-pron">హంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వ్రేలాడుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">82</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Hang</span><span
+                                class="telugu-pron">హ్యాంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hanged</span><span
+                                class="telugu-pron">హ్యాంగ్‌డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hanged</span><span
+                                class="telugu-pron">హ్యాంగ్‌డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఉరితీయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">83</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Have</span><span
+                                class="telugu-pron">హ్యావ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">had</span><span
+                                class="telugu-pron">హ్యాడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">had</span><span
+                                class="telugu-pron">హ్యాడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కలిగియుండుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">84</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Hear</span><span
+                                class="telugu-pron">హియర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">heard</span><span
+                                class="telugu-pron">హర్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">heard</span><span
+                                class="telugu-pron">హర్డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వినుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">85</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Heave</span><span
+                                class="telugu-pron">హీవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">heaved/hove</span><span
+                                class="telugu-pron">హీవ్‌డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">heaved/hove</span><span
+                                class="telugu-pron">హీవ్‌డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పైకెత్తుట, పైకిలేచుట, ఉబ్బుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">86</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Hew</span><span
+                                class="telugu-pron">హ్యూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hewed</span><span
+                                class="telugu-pron">హ్యూడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hewn/hewed</span><span
+                                class="telugu-pron">హ్యూన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">నరుకుట, చెక్కుట, కోయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">87</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Hide</span><span
+                                class="telugu-pron">హైడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hid</span><span
+                                class="telugu-pron">హిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hidden</span><span
+                                class="telugu-pron">హిడెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">దాచుట, దాగుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">88</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Hit</span><span class="telugu-pron">ヒット</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hit</span><span class="telugu-pron">ヒット</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hit</span><span class="telugu-pron">ヒット</span>
+                        </div>
+                    </td>
+                    <td class="telugu-meaning">బాదుట, కొట్టుట, తాకుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">89</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Hold</span><span
+                                class="telugu-pron">హోల్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">held</span><span
+                                class="telugu-pron">హెల్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">held</span><span
+                                class="telugu-pron">హెల్డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పట్టుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">90</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Hurt</span><span
+                                class="telugu-pron">హర్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hurt</span><span
+                                class="telugu-pron">హర్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">hurt</span><span
+                                class="telugu-pron">హర్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">గాయపరచుట, గాయపడుట, నొప్పించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">91</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Inlay</span><span
+                                class="telugu-pron">ఇన్‌లే</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">inlaid</span><span
+                                class="telugu-pron">ఇన్‌లెయిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">inlaid</span><span
+                                class="telugu-pron">ఇన్‌లెయిడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తాపడంచేయుట, నగిషి చెక్కుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">92</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Keep</span><span
+                                class="telugu-pron">కీప్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">kept</span><span
+                                class="telugu-pron">కెప్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">kept</span><span
+                                class="telugu-pron">కెప్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఉంచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">93</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Kneel</span><span
+                                class="telugu-pron">నీల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">knelt</span><span
+                                class="telugu-pron">నెల్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">knelt</span><span
+                                class="telugu-pron">నెల్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మోకరిల్లుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">94</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Knit</span><span
+                                class="telugu-pron">నిట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">knit</span><span
+                                class="telugu-pron">నిట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">knit</span><span
+                                class="telugu-pron">నిట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">అల్లుట, కుట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">95</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Know</span><span class="telugu-pron">నో</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">knew</span><span
+                                class="telugu-pron">న్యూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">known</span><span
+                                class="telugu-pron">నోన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తెలిసికొనుట, తెలియుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">96</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Lade</span><span
+                                class="telugu-pron">లేడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">laded</span><span
+                                class="telugu-pron">లేడెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">laden</span><span
+                                class="telugu-pron">లేడెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">సరకునెక్కించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">97</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Lay</span><span class="telugu-pron">లే</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">laid</span><span
+                                class="telugu-pron">లెయిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">laid</span><span
+                                class="telugu-pron">లెయిడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వేయుట, ఉంచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">98</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Lead</span><span
+                                class="telugu-pron">లీడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">led</span><span
+                                class="telugu-pron">లెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">led</span><span
+                                class="telugu-pron">లెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">త్రోవచూపుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">99</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Lean</span><span
+                                class="telugu-pron">లీన్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">leaned/leant</span><span
+                                class="telugu-pron">లీన్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">leaned/leant</span><span
+                                class="telugu-pron">లీన్డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఒక ప్రక్కకు ఒరుగుట, ఆనుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">100</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Leap</span><span
+                                class="telugu-pron">లీప్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">leaped/leapt</span><span
+                                class="telugu-pron">లీప్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">leaped/leapt</span><span
+                                class="telugu-pron">లీప్డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">దుముకుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">101</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Learn</span><span
+                                class="telugu-pron">లెర్న్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">learned/learnt</span><span
+                                class="telugu-pron">లెర్న్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">learned/learnt</span><span
+                                class="telugu-pron">లెర్న్డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">నేర్చుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">102</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Leave</span><span
+                                class="telugu-pron">లీవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">left</span><span
+                                class="telugu-pron">లెఫ్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">left</span><span
+                                class="telugu-pron">లెఫ్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">విడుచుట, వదలివేయుట, మానుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">103</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Lend</span><span
+                                class="telugu-pron">లెండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">lent</span><span
+                                class="telugu-pron">లెంట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">lent</span><span
+                                class="telugu-pron">లెంట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">అప్పిచ్చుట, బదులిచ్చుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">104</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Let</span><span
+                                class="telugu-pron">లెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">let</span><span
+                                class="telugu-pron">లెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">let</span><span
+                                class="telugu-pron">లెట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">అనుమతించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">105</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Lie</span><span class="telugu-pron">లై</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">lay</span><span class="telugu-pron">లే</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">lain</span><span
+                                class="telugu-pron">లెయిన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పరుండుట, పడియుండుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">106</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Light</span><span
+                                class="telugu-pron">లైట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">lit/lighted</span><span
+                                class="telugu-pron">లిట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">lit/lighted</span><span
+                                class="telugu-pron">లిట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వెలిగించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">107</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Lose</span><span
+                                class="telugu-pron">లూజ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">lost</span><span
+                                class="telugu-pron">లాస్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">lost</span><span
+                                class="telugu-pron">లాస్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పోగొట్టుకొనుట, ఓడిపోవుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">108</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Make</span><span
+                                class="telugu-pron">మేక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">made</span><span
+                                class="telugu-pron">మేడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">made</span><span
+                                class="telugu-pron">మేడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తయారుచేయుట, ఏర్పరచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">109</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Mean</span><span
+                                class="telugu-pron">మీన్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">meant</span><span
+                                class="telugu-pron">మెంట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">meant</span><span
+                                class="telugu-pron">మెంట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తలచుట, అర్థమిచ్చుట, ఉద్దేశించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">110</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Meet</span><span
+                                class="telugu-pron">మీట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">met</span><span
+                                class="telugu-pron">మెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">met</span><span
+                                class="telugu-pron">మెట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కలుసుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">111</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Mistake</span><span
+                                class="telugu-pron">మిస్టేక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">mistook</span><span
+                                class="telugu-pron">మిస్టూక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">mistaken</span><span
+                                class="telugu-pron">సేకెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పొరబడుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">112</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Mow</span><span class="telugu-pron">మో</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">mowed</span><span
+                                class="telugu-pron">మోడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">mowed/mown</span><span
+                                class="telugu-pron">మోడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">గడ్డికోయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">113</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Outbid</span><span
+                                class="telugu-pron">అవుట్‌బిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">outbid</span><span
+                                class="telugu-pron">అవుట్‌బిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">outbid</span><span
+                                class="telugu-pron">అవుట్‌బిడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">హెచ్చుధరకు పాడుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">114</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Pay</span><span class="telugu-pron">పే</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">paid</span><span
+                                class="telugu-pron">పెయిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">paid</span><span
+                                class="telugu-pron">పెయిడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చెల్లించుట, కట్టుట, తీర్చుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">115</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Put</span><span
+                                class="telugu-pron">పుట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">put</span><span
+                                class="telugu-pron">పుట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">put</span><span
+                                class="telugu-pron">పుట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పెట్టుట, ఉంచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">116</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Quit</span><span
+                                class="telugu-pron">క్విట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">quit</span><span
+                                class="telugu-pron">క్విట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">quit</span><span
+                                class="telugu-pron">క్విట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మానుట, విడిచిపెట్టుట</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="page-number">3</div>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="page">
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="num-col">No.</th>
+                    <th>Present Tense (V<sub>1</sub>)</th>
+                    <th>Past Tense (V<sub>2</sub>)</th>
+                    <th>Past Participle (V<sub>3</sub>)</th>
+                    <th>Telugu Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="num-col">117</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Read</span><span
+                                class="telugu-pron">రీడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">read</span><span
+                                class="telugu-pron">రెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">read</span><span
+                                class="telugu-pron">రెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చదువుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">118</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Relay</span><span
+                                class="telugu-pron">రిలే</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">relaid</span><span
+                                class="telugu-pron">రిలెయిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">relaid</span><span
+                                class="telugu-pron">రిలెయిడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పునఃప్రసారం చేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">119</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Rend</span><span
+                                class="telugu-pron">రెండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">rent</span><span
+                                class="telugu-pron">రెంట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">rent</span><span
+                                class="telugu-pron">రెంట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చించుట, చీల్చుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">120</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Rid</span><span
+                                class="telugu-pron">రిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">rid</span><span
+                                class="telugu-pron">రిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">rid</span><span
+                                class="telugu-pron">రిడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">విడిపించుట, తప్పించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">121</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Ride</span><span
+                                class="telugu-pron">రైడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">rode</span><span
+                                class="telugu-pron">రోడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">ridden</span><span
+                                class="telugu-pron">రిడెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">స్వారీచేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">122</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Ring</span><span
+                                class="telugu-pron">రింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">rang</span><span
+                                class="telugu-pron">రాంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">rung</span><span
+                                class="telugu-pron">రంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మ్రోగుట, మ్రోగించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">123</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Rise</span><span
+                                class="telugu-pron">రైజ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">rose</span><span
+                                class="telugu-pron">రోజ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">risen</span><span
+                                class="telugu-pron">రిజెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఉదయించుట, లేచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">124</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Rive</span><span
+                                class="telugu-pron">రైవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">rived</span><span
+                                class="telugu-pron">రైవ్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">riven</span><span
+                                class="telugu-pron">రివెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చీల్చుట, బ్రద్దలగుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">125</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Run</span><span class="telugu-pron">రన్</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">ran</span><span
+                                class="telugu-pron">రాన్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">run</span><span class="telugu-pron">రన్</span>
+                        </div>
+                    </td>
+                    <td class="telugu-meaning">పరుగెత్తుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">126</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Saw</span><span class="telugu-pron">సా</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sawed</span><span
+                                class="telugu-pron">సాడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sawed/sawn</span><span
+                                class="telugu-pron">సాడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">రంపంతో కోయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">127</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Say</span><span class="telugu-pron">సే</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">said</span><span
+                                class="telugu-pron">సెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">said</span><span
+                                class="telugu-pron">సెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చెప్పుట, చెప్పుట, అనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">128</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">See</span><span class="telugu-pron">సీ</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">saw</span><span class="telugu-pron">సా</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">seen</span><span
+                                class="telugu-pron">సీన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చూచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">129</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Seek</span><span
+                                class="telugu-pron">సీక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sought</span><span
+                                class="telugu-pron">సాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sought</span><span
+                                class="telugu-pron">సాట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వెతుకుట, అన్వేషించుట, కోరుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">130</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Sell</span><span
+                                class="telugu-pron">సెల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sold</span><span
+                                class="telugu-pron">సోల్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sold</span><span
+                                class="telugu-pron">సోల్డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">అమ్ముట, అమ్ముడగుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">131</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Send</span><span
+                                class="telugu-pron">సెండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sent</span><span
+                                class="telugu-pron">సెంట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sent</span><span
+                                class="telugu-pron">సెంట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పంపుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">132</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Set</span><span
+                                class="telugu-pron">సెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">set</span><span
+                                class="telugu-pron">సెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">set</span><span
+                                class="telugu-pron">సెట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">అమర్చుట, అస్తమించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">133</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Sew</span><span
+                                class="telugu-pron">స్యూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sewed</span><span
+                                class="telugu-pron">స్యూడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sewn</span><span
+                                class="telugu-pron">స్యూన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కుట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">134</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Shake</span><span
+                                class="telugu-pron">షేక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shook</span><span
+                                class="telugu-pron">షుక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shaken</span><span
+                                class="telugu-pron">షేకెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కదులుట, కదల్చుట, వణుకుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">135</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Shed</span><span
+                                class="telugu-pron">షెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shed</span><span
+                                class="telugu-pron">షెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shed</span><span
+                                class="telugu-pron">షెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కార్చుట, చల్లుట, కార్చుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">136</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Shine</span><span
+                                class="telugu-pron">షైన్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shone</span><span
+                                class="telugu-pron">షోన్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shone</span><span
+                                class="telugu-pron">షోన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మెరయుట, ప్రకాశించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">137</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Shoot</span><span
+                                class="telugu-pron">షూట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shot</span><span
+                                class="telugu-pron">షాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shot</span><span
+                                class="telugu-pron">షాట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">గురిచూసికొట్టుట, కాల్చుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">138</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Show</span><span class="telugu-pron">షో</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">showed</span><span
+                                class="telugu-pron">షోడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shown</span><span
+                                class="telugu-pron">షోన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చూపుట, తెలుపుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">139</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Shrink</span><span
+                                class="telugu-pron">శ్రింక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shrunk</span><span
+                                class="telugu-pron">శ్రంక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shrunk</span><span
+                                class="telugu-pron">శ్రంక్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ముడుచుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">140</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Shut</span><span
+                                class="telugu-pron">షట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shut</span><span
+                                class="telugu-pron">షట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">shut</span><span
+                                class="telugu-pron">షట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మూయుట, మూసుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">141</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Sing</span><span
+                                class="telugu-pron">సింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sang</span><span
+                                class="telugu-pron">స్యాంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sung</span><span
+                                class="telugu-pron">సంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పాడుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">142</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Sink</span><span
+                                class="telugu-pron">సింక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sank</span><span
+                                class="telugu-pron">స్యాంక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sunk</span><span
+                                class="telugu-pron">సంక్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మునుగుట, ముంచుట, ఇంకుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">143</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Sit</span><span
+                                class="telugu-pron">సిట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sat</span><span
+                                class="telugu-pron">శాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sat</span><span
+                                class="telugu-pron">శాట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కూర్చోనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">144</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Sleep</span><span
+                                class="telugu-pron">స్లీప్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">slept</span><span
+                                class="telugu-pron">స్లెప్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">slept</span><span
+                                class="telugu-pron">స్లెప్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">నిద్రించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">145</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Slide</span><span
+                                class="telugu-pron">స్లైడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">slid</span><span
+                                class="telugu-pron">స్లిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">slid</span><span
+                                class="telugu-pron">స్లిడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">జారుట, జరుపుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">146</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Sling</span><span
+                                class="telugu-pron">స్లింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">slung</span><span
+                                class="telugu-pron">స్లంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">slung</span><span
+                                class="telugu-pron">స్లంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">విసురుట, ఒడిసెవిసురుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">147</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Slit</span><span
+                                class="telugu-pron">స్లిట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">slit</span><span
+                                class="telugu-pron">స్లిట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">slit</span><span
+                                class="telugu-pron">స్లిట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కోయుట, చీల్చుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">148</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Smell</span><span
+                                class="telugu-pron">స్మెల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">smelt</span><span
+                                class="telugu-pron">స్మెల్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">smelt</span><span
+                                class="telugu-pron">స్మెల్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వాసనచూచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">149</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Smite</span><span
+                                class="telugu-pron">స్మైట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">smote</span><span
+                                class="telugu-pron">స్మోట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">smitten</span><span
+                                class="telugu-pron">స్మిటెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కొట్టుట, మొత్తుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">150</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Sow</span><span class="telugu-pron">సో</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sowed</span><span
+                                class="telugu-pron">సోడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sown</span><span
+                                class="telugu-pron">సోన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">విత్తుట, నాటుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">151</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Speak</span><span
+                                class="telugu-pron">స్పీక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spoke</span><span
+                                class="telugu-pron">స్పోక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spoken</span><span
+                                class="telugu-pron">స్పోకెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఉపన్యసించుట, మాట్లాడుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">152</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Speed</span><span
+                                class="telugu-pron">స్పీడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">speeded/sped</span><span
+                                class="telugu-pron">స్పీడెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">speeded/sped</span><span
+                                class="telugu-pron">స్పీడెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వేగంగాపోవుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">153</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Spell</span><span
+                                class="telugu-pron">స్పెల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spelt/spelled</span><span
+                                class="telugu-pron">స్పెల్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spelt/spelled</span><span
+                                class="telugu-pron">స్పెల్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పలుకుట, ఉచ్చరించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">154</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Spend</span><span
+                                class="telugu-pron">స్పెండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spent</span><span
+                                class="telugu-pron">స్పెంట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spent</span><span
+                                class="telugu-pron">స్పెంట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఖర్చుగుట, ఖర్చుపెట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">155</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Spill</span><span
+                                class="telugu-pron">స్పిల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spilt/spilled</span><span
+                                class="telugu-pron">స్పిల్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spilt/spilled</span><span
+                                class="telugu-pron">స్పిల్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వలకపోయుట, చిందుట, ఒలుకుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">156</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Spin</span><span
+                                class="telugu-pron">స్పిన్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spun</span><span
+                                class="telugu-pron">స్పన్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spun</span><span
+                                class="telugu-pron">స్పన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఒడుకుట</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="page-number">4</div>
+    </div>
+
+    <!-- PAGE 5 -->
+    <div class="page">
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="num-col">No.</th>
+                    <th>Present Tense (V<sub>1</sub>)</th>
+                    <th>Past Tense (V<sub>2</sub>)</th>
+                    <th>Past Participle (V<sub>3</sub>)</th>
+                    <th>Telugu Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="num-col">157</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Spit</span><span
+                                class="telugu-pron">స్పిట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spat</span><span
+                                class="telugu-pron">స్పాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spat</span><span
+                                class="telugu-pron">స్పాట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఊయుట, ఉమ్మిట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">158</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Split</span><span
+                                class="telugu-pron">స్ప్లిట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">split</span><span
+                                class="telugu-pron">స్ప్లిట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">split</span><span
+                                class="telugu-pron">స్ప్లిట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">బద్దలగుట, బ్రద్దలుచేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">159</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Spoil</span><span
+                                class="telugu-pron">స్పాయిల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spoilt/spoiled</span><span
+                                class="telugu-pron">స్పాయిల్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spoilt/spoiled</span><span
+                                class="telugu-pron">స్పాయిల్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చెడగొట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">160</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Spread</span><span
+                                class="telugu-pron">స్ప్రెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spread</span><span
+                                class="telugu-pron">స్ప్రెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">spread</span><span
+                                class="telugu-pron">స్ప్రెడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">విస్తరించుట, పరచుట, క్రమ్ముట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">161</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Spring</span><span
+                                class="telugu-pron">స్ప్రింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sprang</span><span
+                                class="telugu-pron">స్ప్రేంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sprung</span><span
+                                class="telugu-pron">స్ప్రంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">దుముకుట, ఉద్భవించుట, మొలచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">162</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Stand</span><span
+                                class="telugu-pron">స్టాండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">stood</span><span
+                                class="telugu-pron">స్టూడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">stood</span><span
+                                class="telugu-pron">స్టూడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">నిలబడుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">163</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Steal</span><span
+                                class="telugu-pron">స్టీల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">stole</span><span
+                                class="telugu-pron">స్టోల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">stolen</span><span
+                                class="telugu-pron">స్టోలెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">దొంగిలించుట, కాజేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">164</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Stick</span><span
+                                class="telugu-pron">స్టిక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">stuck</span><span
+                                class="telugu-pron">స్టక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">stuck</span><span
+                                class="telugu-pron">స్టక్</span></div>
+                    </td>
+                    <td class="telugu-meaning">అంటించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">165</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Sting</span><span
+                                class="telugu-pron">స్టింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">stung</span><span
+                                class="telugu-pron">స్టంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">stung</span><span
+                                class="telugu-pron">స్టంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కుట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">166</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Stink</span><span
+                                class="telugu-pron">స్టింక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">stank</span><span
+                                class="telugu-pron">స్టాంక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">stunk</span><span
+                                class="telugu-pron">స్టంక్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కంపుకొట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">167</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Strew</span><span
+                                class="telugu-pron">స్ట్రూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">strewed</span><span
+                                class="telugu-pron">స్ట్రూడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">strewed/strewn</span><span
+                                class="telugu-pron">స్ట్రూడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">నేలమీద ఏదైనా చల్లుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">168</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Stride</span><span
+                                class="telugu-pron">స్ట్రైడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">strode</span><span
+                                class="telugu-pron">స్ట్రోడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">stridden</span><span
+                                class="telugu-pron">స్ట్రిడెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తొక్కుట, పెద్ద అడుగులు వేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">169</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Strike</span><span
+                                class="telugu-pron">స్ట్రైక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">struck</span><span
+                                class="telugu-pron">స్ట్రక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">struck</span><span
+                                class="telugu-pron">స్ట్రక్</span></div>
+                    </td>
+                    <td class="telugu-meaning">కొట్టుట, సమ్మెచేయుట, తట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">170</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">String</span><span
+                                class="telugu-pron">స్టింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">strung</span><span
+                                class="telugu-pron">స్ట్రంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">strung</span><span
+                                class="telugu-pron">స్ట్రంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మీటుట, దండగుచ్చుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">171</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Strive</span><span
+                                class="telugu-pron">స్ట్రైవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">strove</span><span
+                                class="telugu-pron">స్ట్రోవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">striven</span><span
+                                class="telugu-pron">స్ట్రివెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పోరాడుట, గట్టిగా ప్రయత్నించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">172</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Swear</span><span
+                                class="telugu-pron">స్వేర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">swore</span><span
+                                class="telugu-pron">స్వోర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">sworn</span><span
+                                class="telugu-pron">స్వోర్న్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ప్రమాణంచేయుట, ఒట్టువేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">173</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Sweep</span><span
+                                class="telugu-pron">స్వీప్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">swept</span><span
+                                class="telugu-pron">స్వెప్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">swept</span><span
+                                class="telugu-pron">స్వెప్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఊడ్చుట, చిమ్ముట, తుడిచిపెట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">174</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Swell</span><span
+                                class="telugu-pron">స్వెల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">swelled</span><span
+                                class="telugu-pron">స్వెల్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">swelled/swollen</span><span
+                                class="telugu-pron">స్వెల్డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వాచుట, వాయునట్లుచేయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">175</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Swim</span><span
+                                class="telugu-pron">స్విమ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">swam</span><span
+                                class="telugu-pron">స్వామ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">swum</span><span
+                                class="telugu-pron">స్వమ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఈదుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">176</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Swing</span><span
+                                class="telugu-pron">స్వింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">swung</span><span
+                                class="telugu-pron">స్వంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">swung</span><span
+                                class="telugu-pron">స్వంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఊగుట, ఊపుట, త్రిప్పుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">177</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Take</span><span
+                                class="telugu-pron">టేక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">took</span><span
+                                class="telugu-pron">టుక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">taken</span><span
+                                class="telugu-pron">టేకెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తీసుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">178</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Teach</span><span
+                                class="telugu-pron">టీచ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">taught</span><span
+                                class="telugu-pron">టాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">taught</span><span
+                                class="telugu-pron">టాట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">బోధించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">179</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Tear</span><span
+                                class="telugu-pron">టేయర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">tore</span><span
+                                class="telugu-pron">టోర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">torn</span><span
+                                class="telugu-pron">టార్న్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చింపుట, చిరుగుట, రక్కుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">180</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Tell</span><span
+                                class="telugu-pron">టెల్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">told</span><span
+                                class="telugu-pron">టోల్డ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">told</span><span
+                                class="telugu-pron">టోల్డ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">చెప్పుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">181</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Think</span><span
+                                class="telugu-pron">థింక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">thought</span><span
+                                class="telugu-pron">థాట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">thought</span><span
+                                class="telugu-pron">థాట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఆలోచించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">182</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Thrive</span><span
+                                class="telugu-pron">థ్రైవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">throve/thrived</span><span
+                                class="telugu-pron">థ్రోవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">thriven/thrived</span><span
+                                class="telugu-pron">థ్రివెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వృద్ధిలోనికివచ్చుట, ప్రగతి సాధించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">183</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Throw</span><span
+                                class="telugu-pron">త్రో</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">threw</span><span
+                                class="telugu-pron">త్రూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">thrown</span><span
+                                class="telugu-pron">త్రోన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">విసరివేయుట, రువ్వుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">184</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Thrust</span><span
+                                class="telugu-pron">త్రస్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">thrust</span><span
+                                class="telugu-pron">త్రస్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">thrust</span><span
+                                class="telugu-pron">త్రస్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">త్రోయుట, పొడుచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">185</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Tread</span><span
+                                class="telugu-pron">ట్రెడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">trod</span><span
+                                class="telugu-pron">ట్రాడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">trod/trodden</span><span
+                                class="telugu-pron">ట్రాడెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">అణచుట, తొక్కుట, ముట్టుపెట్టుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">186</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Underbid</span><span
+                                class="telugu-pron">అండర్‌బిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">underbid</span><span
+                                class="telugu-pron">అండర్‌బిడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">underbid</span><span
+                                class="telugu-pron">అండర్‌బిడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వేలంలో తక్కువకు పాడుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">187</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Upset</span><span
+                                class="telugu-pron">అప్‌సెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">upset</span><span
+                                class="telugu-pron">అప్‌సెట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">upset</span><span
+                                class="telugu-pron">అప్‌సెట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">తలక్రిందులగుట, పడద్రోయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">188</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Wake</span><span
+                                class="telugu-pron">వేక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">woke</span><span
+                                class="telugu-pron">వోక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">woken</span><span
+                                class="telugu-pron">వోకెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">మేల్కొనుట, నిద్రలేపుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">189</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Wear</span><span
+                                class="telugu-pron">వేర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">wore</span><span
+                                class="telugu-pron">వోర్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">worn</span><span
+                                class="telugu-pron">వోర్న్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ధరించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">190</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Weave</span><span
+                                class="telugu-pron">వీవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">wove</span><span
+                                class="telugu-pron">వోవ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">woven</span><span
+                                class="telugu-pron">వోవెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">నేయుట, అల్లుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">191</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Weep</span><span
+                                class="telugu-pron">వీప్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">wept</span><span
+                                class="telugu-pron">వెప్ట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">wept</span><span
+                                class="telugu-pron">వెప్ట్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఏడ్చుట, రోధించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">192</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Win</span><span
+                                class="telugu-pron">విన్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">won</span><span class="telugu-pron">వన్</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">won</span><span class="telugu-pron">వన్</span>
+                        </div>
+                    </td>
+                    <td class="telugu-meaning">గెలుచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">193</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Wind</span><span
+                                class="telugu-pron">వైండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">wound</span><span
+                                class="telugu-pron">వుండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">wound</span><span
+                                class="telugu-pron">వుండ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఊదుట, ఊదుట, త్రిప్పుట, గాలివీయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">194</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Withdraw</span><span
+                                class="telugu-pron">విత్‌డ్రా</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">withdrew</span><span
+                                class="telugu-pron">విత్‌డ్రూ</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">withdrawn</span><span
+                                class="telugu-pron">విత్‌డ్రాన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఉపసంహరించుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">195</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Wring</span><span
+                                class="telugu-pron">రింగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">wrung</span><span
+                                class="telugu-pron">రంగ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">wrung</span><span
+                                class="telugu-pron">రంగ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">పిండుట, నలుచుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">196</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Write</span><span
+                                class="telugu-pron">రైట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">wrote</span><span
+                                class="telugu-pron">రోట్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">written</span><span
+                                class="telugu-pron">రిటెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">వ్రాయుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">197</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Understand</span><span
+                                class="telugu-pron">అండర్‌స్టాండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">understood</span><span
+                                class="telugu-pron">అండర్‌స్టూడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">understood</span><span
+                                class="telugu-pron">అండర్‌స్టూడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">అర్థం చేసుకొనుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">198</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Overcome</span><span
+                                class="telugu-pron">ఓవర్‌కమ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">overcame</span><span
+                                class="telugu-pron">ఓవర్‌కేమ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">overcome</span><span
+                                class="telugu-pron">ఓవర్‌కమ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">జయించుట, అధిగమించుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">199</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Overtake</span><span
+                                class="telugu-pron">ఓవర్‌టేక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">overtook</span><span
+                                class="telugu-pron">ఓవర్‌టుక్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">overtaken</span><span
+                                class="telugu-pron">ఓవర్‌టేకెన్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ముందుకు దాటిపోవుట</td>
+                </tr>
+                <tr>
+                    <td class="num-col">200</td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">Withstand</span><span
+                                class="telugu-pron">విత్‌స్టాండ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">withstood</span><span
+                                class="telugu-pron">విత్‌స్టూడ్</span></div>
+                    </td>
+                    <td>
+                        <div class="verb-cell"><span class="english-text">withstood</span><span
+                                class="telugu-pron">విత్‌స్టూడ్</span></div>
+                    </td>
+                    <td class="telugu-meaning">ఎదుర్కొనుట, తట్టుకొనుట</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="page-number">5</div>
+    </div>
+
+</body>
+
+</html>

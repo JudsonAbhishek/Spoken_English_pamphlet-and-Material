@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenses – Moses' Institute</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            font-size: 15px;
+            /* Matched to Telugu font size */
+            background: #e5e5e5;
+            padding: 30px;
+            margin: 0;
+            color: #000;
+            /* Pure black for maximum contrast */
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        /* A4 page shell */
+        .page {
+            width: 210mm;
+            height: 297mm;
+            margin: auto;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+            /* Outer padding so content stays inside border */
+            padding: 14mm 14mm 12mm 14mm;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .page,
+            .page-rotate {
+                box-shadow: none;
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        /* Double border for print look */
+        .border-outer {
+            border: 2px solid #000;
+            padding: 5px;
+            height: 271mm;
+            box-sizing: border-box;
+        }
+
+        .border-inner {
+            border: 1px solid #000;
+            padding: 12px 14px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Definition line */
+        .top-note {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Main TENSES heading box */
+        h2 {
+            text-align: center;
+            border: 2px solid #000;
+            padding: 5px 10px;
+            margin: 0 0 10px 0;
+            font-size: 22px;
+            font-weight: 800;
+            font-family: "Times New Roman", serif;
+        }
+
+        h2 .tel {
+            font-family: 'Tiro Telugu', serif;
+            font-weight: 800;
+        }
+
+        /* Intro paragraph */
+        .intro {
+            font-size: 15px;
+            margin: 4px 0;
+        }
+
+        .intro-list {
+            list-style: none;
+            padding: 0;
+            margin: 4px 0 4px 8px;
+            font-size: 16px;
+        }
+
+        .intro-list li {
+            margin: 2px 0;
+        }
+
+        .tel {
+            font-family: 'Tiro Telugu', serif;
+            font-size: 15px;
+            color: #000;
+            font-weight: 700;
+            /* Increased for maximum clarity */
+        }
+
+        .section-title {
+            font-weight: 800;
+            font-size: 17px;
+            margin-top: 12px;
+            margin-bottom: 4px;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .section-title .hint {
+            font-style: italic;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 14px;
+            color: #000;
+        }
+
+        /* Tense numbered list */
+        ol {
+            margin: 0 0 0 28px;
+            padding: 0;
+            font-size: 15px;
+        }
+
+        ol li {
+            margin-bottom: 4px;
+            line-height: 1.5;
+            font-weight: 700;
+            /* Bold English text */
+        }
+
+        .sub {
+            margin-left: 12px;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .or-line {
+            text-align: center;
+            font-style: italic;
+            font-size: 13.5px;
+            color: #000;
+            margin: 0;
+        }
+
+        .note-line {
+            font-size: 15px;
+            margin: 8px 0 4px 0;
+            line-height: 1.5;
+        }
+
+        .no-print {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 1000;
+        }
+
+        .no-print button {
+            background: #001f3f;
+            color: #B8860B;
+            border: 2px solid #B8860B;
+            padding: 10px 22px;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 40px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+        }
+
+        .page-rotate {
+            width: 210mm;
+            height: 297mm;
+            margin: 40px auto 0 auto;
+            background: white;
+            box-sizing: border-box;
+            position: relative;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+            overflow: hidden;
+        }
+
+        @media print {
+            .page-rotate {
+                box-shadow: none;
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        .rotate-wrapper {
+            position: absolute;
+            width: 297mm;
+            height: 210mm;
+            top: 43.5mm;
+            left: -43.5mm;
+            transform: rotate(-90deg);
+            transform-origin: center;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .pronouns-table {
+            border-collapse: collapse;
+            font-size: 15px;
+            width: 100%;
+            height: calc(100% - 40px);
+        }
+
+        .pronouns-table th {
+            border: 1px solid black;
+            padding: 6px 4px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .pronouns-table td {
+            border: 1px solid black;
+            padding: 4px 4px;
+            text-align: center;
+        }
+
+        .pronouns-layout-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+            margin-top: 5px;
+            font-weight: 700;
+        }
+
+        .pronouns-layout-table td {
+            padding: 4px 2px;
+            vertical-align: middle;
+        }
+
+        .person-col {
+            font-weight: bold;
+            width: 15%;
+            font-size: 13.5px;
+        }
+
+        .brace-col {
+            width: 4%;
+            text-align: center;
+            font-family: "Courier New", monospace;
+            font-weight: 100;
+        }
+
+        .pronoun-col {
+            width: 35%;
+            font-size: 13.5px;
+        }
+
+        .note-col {
+            width: 25%;
+            font-size: 13.5px;
+            color: #000;
+        }
+
+        .handwritten-note {
+            color: #b82d2d;
+            /* Darker red for better contrast */
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 14.5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="no-print">
+        <button onclick="window.print()">📥 Print / Save as PDF</button>
+    </div>
+
+    <div class="page">
+        <div class="border-outer">
+            <div class="border-inner">
+
+
+
+                <!-- Main bordered heading -->
+                <h2>TENSES <span class="tel">(కాలములు)</span></h2>
+
+                <!-- Definition line (as you wrote it) -->
+                <div class="top-note" style="font-weight: 700;">
+                    <b>Tense</b> is a <u>verb form</u> which tells the <u>time</u> of an <u>action</u> or event.<br>
+                </div>
+
+                <!-- Intro -->
+                <p class="intro" style="font-weight: 700;">In English, Tenses are mainly three types</p>
+
+                <ol class="intro-list" style="list-style:none; padding:0; margin:4px 0 4px 8px; font-weight: 700;">
+                    <li>
+                        <b>1. Present Tense</b>
+                        <span class="tel">(వర్తమాన కాలము లేదా ప్రస్తుతానికి సంబంధించినది)</span>
+                    </li>
+                    <li>
+                        <b>2. Past Tense</b>
+                        <span class="tel">(భూతకాలము లేక జరిగిపోయిన దానికి సంబంధించినది)</span>
+                    </li>
+                    <li>
+                        <b>3. Future Tense</b>
+                        <span class="tel">(భవిష్యత్ కాలము లేక జరగబోయే కాలమునకు సంబంధించినది)</span>
+                    </li>
+                </ol>
+
+                <div style="text-align: center; margin: 1px 0;">
+                    <img src="tense.png" alt="Tenses Flowchart" style="max-width: 80%; height: auto;">
+                </div>
+
+                <p class="note-line" style="font-weight: 700;">
+                    Each tense is further divided into four types based on time or situation, making a total of 12
+                    tenses. They are:
+                </p>
+
+                <!-- PRESENT TENSE -->
+                <div class="section-title">
+                    PRESENT TENSE :
+                    <!-- <span class="hint">They are . . . . . . .</span> -->
+                </div>
+                <ol>
+                    <li>
+                        Present <u>Simple</u> Tense (or) Simple Present Tense (or) Present Indefinite Tense
+                        <!-- <div class="or-line">(or)</div>
+                        <div class="sub">Present Indefinite Tense</div> -->
+                    </li>
+                    <li>
+                        Present <u>Continuous</u> Tense (or) Present Progressive Tense
+                        <!-- <div class="or-line">(or)</div>
+                        <div class="sub">Present Progressive Tense</div> -->
+                    </li>
+                    <li>Present <u>Perfect</u> Tense</li>
+                    <li>Present <u>Perfect Continuous</u> Tense</li>
+                </ol>
+
+                <!-- PAST TENSE -->
+                <div class="section-title">PAST TENSE :</div>
+                <ol>
+                    <li>
+                        Past <u>Simple</u> Tense (or) Simple Past Tense (or) Past Indefinite Tense
+                        <!-- <div class="or-line">(or)</div>
+                        <div class="sub">Past Indefinite Tense</div> -->
+                    </li>
+                    <li>
+                        Past <u>Continuous</u> Tense (or) Past Progressive Tense
+                        <!-- <div class="or-line">(or)</div>
+                        <div class="sub">Past Progressive Tense</div> -->
+                    </li>
+                    <li>Past <u>Perfect</u> Tense</li>
+                    <li>Past <u>Perfect Continuous</u> Tense</li>
+                </ol>
+
+                <!-- FUTURE TENSE -->
+                <div class="section-title">FUTURE TENSE :</div>
+                <ol>
+                    <li>
+                        Future <u>Simple</u> Tense (or) Simple Future Tense (or) Future Indefinite Tense
+                        <!-- <div class="or-line">(or)</div>
+                        <div class="sub">Future Indefinite Tense</div> -->
+                    </li>
+                    <li>
+                        Future <u>Continuous</u> Tense (or) Future Progressive Tense
+                        <!-- <div class="or-line">(or)</div>
+                        <div class="sub">Future Progressive Tense</div> -->
+                    </li>
+                    <li>Future <u>Perfect</u> Tense</li>
+                    <li>Future <u>Perfect Continuous</u> Tense</li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PAGE 2 – PERSONAL PRONOUNS                      -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="page" style="margin-top:40px;">
+        <div class="border-outer">
+            <div class="border-inner">
+
+                <h2
+                    style="text-align:center; border:2px solid #000; padding:5px; font-size:20px; font-weight: 800; margin:0 0 14px 0; position: relative;">
+                    PERSONAL PRONOUNS
+                </h2>
+
+                <table class="pronouns-layout-table">
+                    <tr>
+                        <td class="person-col"></td>
+                        <td class="brace-col"></td>
+                        <td class="pronoun-col"
+                            style="color: blue; font-family: 'Comic Sans MS', cursive, sans-serif; font-weight: bold; font-size: 13px; padding-bottom: 2px;">
+                            Subjects</td>
+                        <td class="note-col"></td>
+                        <td class="brace-col"></td>
+                        <td class="handwritten-note"></td>
+                    </tr>
+                    <!-- I Person -->
+                    <tr>
+                        <td class="person-col" rowspan="2">1st Person</td>
+                        <td class="brace-col" rowspan="2">
+                            <svg width="24" height="100%" viewBox="0 0 20 100" preserveAspectRatio="none"
+                                style="display: block; margin: auto;">
+                                <path d="M 15 5 Q 5 5 5 15 L 5 45 Q 5 50 15 50 Q 5 50 5 55 L 5 85 Q 5 95 15 95"
+                                    stroke="black" fill="none" stroke-width="3" vector-effect="non-scaling-stroke" />
+                            </svg>
+                        </td>
+                        <td class="pronoun-col"><b>I</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; <span
+                                class="tel">నేను</span></td>
+                        <td class="note-col">(Singular Number)</td>
+                        <td class="brace-col" rowspan="2">
+                            <svg width="24" height="100%" viewBox="0 0 20 100" preserveAspectRatio="none"
+                                style="display: block; margin: auto;">
+                                <path d="M 5 5 Q 15 5 15 15 L 15 45 Q 15 50 5 50 Q 15 50 15 55 L 15 85 Q 15 95 5 95"
+                                    stroke="black" fill="none" stroke-width="3" vector-effect="non-scaling-stroke" />
+                            </svg>
+                        </td>
+                        <td class="handwritten-note" rowspan="2">Speaker(s)</td>
+                    </tr>
+                    <tr>
+                        <td class="pronoun-col"><b>We(వి)</b> - &nbsp;&nbsp; <span class="tel">మేము, మనము</span></td>
+                        <td class="note-col">(Plural Number)</td>
+                    </tr>
+
+                    <!-- Spacer row -->
+                    <tr>
+                        <td colspan="6" style="padding: 2px 0;"></td>
+                    </tr>
+
+                    <!-- II Person -->
+                    <tr>
+                        <td class="person-col">2nd Person</td>
+                        <td class="brace-col">
+                            <svg width="24" height="30" viewBox="0 0 20 100" preserveAspectRatio="none"
+                                style="display: block; margin: auto;">
+                                <path d="M 15 5 Q 5 5 5 15 L 5 45 Q 5 50 15 50 Q 5 50 5 55 L 5 85 Q 5 95 15 95"
+                                    stroke="black" fill="none" stroke-width="3" vector-effect="non-scaling-stroke" />
+                            </svg>
+                        </td>
+                        <td class="pronoun-col"><b>You</b> &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; <span class="tel">నీవు,
+                                మీరు</span></td>
+                        <td class="note-col">(Singular and Plural Number)</td>
+                        <td class="brace-col"></td>
+                        <td class="handwritten-note">Listener(s)</td>
+                    </tr>
+
+                    <!-- Spacer row -->
+                    <tr>
+                        <td colspan="6" style="padding: 2px 0;"></td>
+                    </tr>
+
+                    <!-- III Person -->
+                    <!-- Row 1 (He) -->
+                    <tr>
+                        <td class="person-col" rowspan="4" style="vertical-align: middle;">3rd Person</td>
+                        <td class="brace-col" rowspan="4">
+                            <svg width="24" height="100%" viewBox="0 0 20 100" preserveAspectRatio="none"
+                                style="display: block; margin: auto;">
+                                <path d="M 15 5 Q 5 5 5 15 L 5 45 Q 5 50 15 50 Q 5 50 5 55 L 5 85 Q 5 95 15 95"
+                                    stroke="black" fill="none" stroke-width="3" vector-effect="non-scaling-stroke" />
+                            </svg>
+                        </td>
+                        <td class="pronoun-col"><b>He</b> &nbsp;&nbsp;-&nbsp;&nbsp; <span class="tel">అతడు, అతను</span>
+                        </td>
+                        <td class="note-col" rowspan="3" style="vertical-align: middle;">(Singular Number)</td>
+                        <td class="brace-col" rowspan="3">
+                            <svg width="24" height="100%" viewBox="0 0 20 100" preserveAspectRatio="none"
+                                style="display: block; margin: auto;">
+                                <path d="M 5 5 Q 15 5 15 15 L 15 45 Q 15 50 5 50 Q 15 50 15 55 L 15 85 Q 15 95 5 95"
+                                    stroke="black" fill="none" stroke-width="3" vector-effect="non-scaling-stroke" />
+                            </svg>
+                        </td>
+                        <td class="handwritten-note" rowspan="4" style="vertical-align: middle;">Distant People</td>
+                    </tr>
+                    <!-- Row 2 (She) -->
+                    <tr>
+                        <td class="pronoun-col"><b>She</b> &nbsp;-&nbsp;&nbsp; <span class="tel">ఆమె</span></td>
+                    </tr>
+                    <!-- Row 3 (It) -->
+                    <tr>
+                        <td class="pronoun-col"><b>It</b> &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; <span class="tel">ఇది.</span>
+                        </td>
+                    </tr>
+                    <!-- Row 4 (They) -->
+                    <tr>
+                        <td class="pronoun-col"><b>They</b> - <span class="tel">వారు, వాళ్ళు</span></td>
+                        <td class="note-col">(Plural Number)</td>
+                        <td class="brace-col"></td>
+                    </tr>
+                </table>
+
+                <hr style="border:1px solid #ccc; margin:6px 0;">
+
+                <!-- CONJUGATION -->
+                <div class="section-title" style="text-decoration:none; font-size:15.5px; margin-top: 6px;">CONJUGATION:
+                </div>
+                <p style="font-size:14px; margin:2px 0 4px 16px; font-style:italic; font-weight: 700;">
+                    "Different forms of a verb is called conjugation of a verb"
+                </p>
+
+                <p style="font-size:15px; margin:2px 0 2px 16px;"><b>Ex:</b></p>
+                <div style="margin-left:24px; font-size:15px; line-height:1.4; font-weight: 700;">
+                    (V₁) Go &nbsp;&nbsp;&nbsp;&nbsp; (V₂) Went &nbsp;&nbsp;&nbsp;&nbsp; (V₃) Gone<br>
+                    (V₁) Do &nbsp;&nbsp;&nbsp;&nbsp; (V₂) Did &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (V₃) Done<br>
+                    (V₁) Write &nbsp;&nbsp; (V₂) Wrote &nbsp;&nbsp;&nbsp; (V₃) Written
+                </div>
+
+                <div style="margin:6px 0 4px 16px; font-size:15px; line-height:1.4; font-weight: 700;">
+                    <b>V₁ =</b> Present Tense form of a verb (V1, is mainly used for simple Present Tense)<br>
+                    <b>V₂ =</b> Past Tense form of a verb (V2, is mainly used for simple Past Tense)<br>
+                    <b>V₃ =</b> Past Participle form of a verb (V3, is mainly used for all Perfect Tenses and for all
+                    passive voices)<br>
+                    <b>V₄ =</b> V₁+ing = Present Participle (V4 is mainly used for on-going actions at Present,
+                    Past & Future Tenses)<br>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 10px; margin: 8px 0 6px 16px; font-weight: 700;">
+                    <span style="font-size: 16px;"><b>General Structure :</b></span>
+                    <div
+                        style="display:flex; border:1.5px solid #000; font-size:15px; text-align: center; width: fit-content;">
+                        <div style="padding:3px 12px; border-right: 1.5px solid black;">Subject</div>
+                        <div style="padding:3px 8px; border-right: 1.5px solid black;">+</div>
+                        <div style="padding:3px 12px; border-right: 1.5px solid black;">Verb</div>
+                        <div style="padding:3px 8px; border-right: 1.5px solid black;">+</div>
+                        <div style="padding:3px 12px;">Object</div>
+                    </div>
+                    <div style="margin-left: 20px; font-size: 15px; font-weight: 700;">
+                        <b>Exp:</b> He eats Fruits
+                    </div>
+                </div>
+
+                <div style="font-size:15px; margin:6px 0 4px 0; line-height:1.4; font-weight: 700;">
+                    <b>SUBJECT :</b> It is a part of a sentence about whom or which something is said.<br>
+                    <span style="margin-left: 16px;"> Doer of an action (Or) Performer of an action.</span><br>
+                    <!-- <span style="margin-left: 16px;">(Or) The heading part of a sentence.</span> -->
+                    <div
+                        style="color: brown; font-style: italic; margin-left: 16px; margin-top: 1px; font-weight: bold;">
+                        (Or) The naming part / heading part of the sentence is called
+                        subject.
+                    </div>
+                </div>
+
+                <div style="font-size:15px; margin:4px 0 4px 0; line-height:1.4; font-weight: 700;">
+                    <b>OBJECT :</b> A Person or thing to which some thing is done.(or) some feeling or thought is
+                    directed.<br>
+                    <div
+                        style="color: brown; font-style: italic; margin-left: 16px; margin-top: 1px; font-weight: bold;">
+                        • A Person or thing acted upon by the Subject.<br>
+                        • A Person or thing who receives the result of an action.
+                    </div>
+                </div>
+
+                <div style="font-size:15px; margin:4px 0 4px 0; line-height:1.4; font-weight: 700;">
+                    <b>VERB :</b> It is a word which expresses the state of doing, being and possessing.
+                </div>
+
+                <div style="font-size:15px; margin-top:6px; font-weight: bold; text-decoration: underline;">
+                    Some Important points or rules to remember
+                </div>
+                <ol
+                    style="font-size:15px; margin:2px 0 0 20px; padding-left: 0; line-height:1.4; list-style-position: inside; font-weight: 700;">
+                    <li>Generally every tense has different helping verbs and main verbs.</li>
+                    <li>We have to add 'not' to the helping verbs to get negative sentences.</li>
+                    <li>We have to put helping verbs before the subjects to get interrogative sentences. (Questions)
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PAGE 3 – 'be' FORMS & WH QUESTION WORDS        -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="page" style="margin-top:40px;">
+        <div class="border-outer">
+            <div class="border-inner">
+
+                <h2
+                    style="text-align:center; border:2px solid #000; padding:5px; font-size:20px; font-weight: 800; margin:0 0 14px 0;">
+                    'Be' FORMS
+                </h2>
+
+                <!-- be forms table -->
+                <div
+                    style="display:flex; justify-content:space-between; font-size:13.5px; line-height:1.9; margin-bottom:6px; font-weight: 700;">
+                    <div>
+                        <b>Be = <span class="tel">ఉండుట</span></b><br>
+                        am = <span class="tel">ఉన్నాను</span><br>
+                        is = <span class="tel">ఉన్నాడు/ఉన్నది</span><br>
+                        are = <span class="tel">ఉన్నాము,ఉన్నావు,ఉన్నారు</span>
+                    </div>
+                    <div>
+                        <b>V₁ <span style="color:brown; font-style:italic;">Present Verb</span></b><br>
+                        Be<br>am<br>is<br>are
+                    </div>
+                    <div>
+                        <b>V₂ <span style="color:brown; font-style:italic;">Past Verb</span></b><br>
+                        was<br>was<br>was<br>were
+                    </div>
+                    <div>
+                        <b>V₃ <span style="color:brown; font-style:italic;">Past Participle Verb</span></b><br>
+                        been<br>been<br>been<br>been
+                    </div>
+                </div>
+
+                <hr style="border:1px solid #ccc; margin:12px 0;">
+
+                <h2
+                    style="text-align:center; border:2px solid #000; padding:5px; font-size:20px; font-weight: 800; margin:0 0 12px 0;">
+                    'Wh' Words (OR) Question Words
+                </h2>
+
+                <!-- WH table -->
+                <table style="width:100%; border-collapse:collapse; font-size:15px; font-weight: 700;">
+                    <tbody>
+                        <tr>
+                            <td style="padding:2px 6px; color:green; font-weight:bold; width:24px;">✔</td>
+                            <td style="padding:2px 6px;">What ?</td>
+                            <td style="padding:2px 6px; width:20px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఏమిటి?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px; color:green; font-weight:bold;">✔</td>
+                            <td style="padding:2px 6px;">Where ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎక్కడ?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px; color:green; font-weight:bold;">✔</td>
+                            <td style="padding:2px 6px;">When ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎప్పుడు?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px; color:green; font-weight:bold;">✔</td>
+                            <td style="padding:2px 6px;">How ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎలా? (ఎట్లు?)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px; color:green; font-weight:bold;">✔</td>
+                            <td style="padding:2px 6px;">Who ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎవరు?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">Whom ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎవరిని?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px; color:green; font-weight:bold;">✔</td>
+                            <td style="padding:2px 6px;">Why ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎందుకు?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">Which ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఏది?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">Whose ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎవరిది?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">How many ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎన్ని?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">How far ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎంత దూరం?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">How much ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎంత?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">How often ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎన్నిసార్లు?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">How soon ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎంత త్వరగా?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">How fast ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎంత వేగంగా?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">How long ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎంత సేపు?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">How long ago ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎంత కాలం క్రితం?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">How early ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎంత ముందుగా?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">How so ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">అది ఎలా?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">For what ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">దేనికోసం?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">From where ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎక్కడి నుండి?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">At what time ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఏ సమయానికి?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:2px 6px;"></td>
+                            <td style="padding:2px 6px;">Since when ?</td>
+                            <td style="padding:2px 6px;">=</td>
+                            <td style="padding:2px 6px;" class="tel">ఎప్పటి నుండి?</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PAGE 4 – PERSONAL PRONOUNS TABLE               -->
+    <!-- ═══════════════════════════════════════════════ -->
+
+
+    <div class="page-rotate">
+        <div class="rotate-wrapper">
+            <h2
+                style="text-align:center; border:2px solid #000; padding:5px; font-size:20px; font-weight: 800; margin:0 0 10px 0;">
+                PERSONAL PRONOUNS TABLE
+            </h2>
+            <table class="pronouns-table">
+
+                <tr>
+                    <th>PERSONS</th>
+                    <th>(Singular / Plural) NUMBER</th>
+                    <th>SUBJECTIVE CASE</th>
+                    <th>OBJECTIVE CASE</th>
+                    <th>POSSESSIVE CASE (POSSESSIVE ADJECTIVES)</th>
+                    <th>POSSESSIVE CASE(PRONOUNS )</th>
+                    <th>REFLEXIVE PRONOUNS</th>
+                </tr>
+
+                <!-- 1st Person -->
+                <tr>
+                    <td rowspan="2"><b>1st Person</b></td>
+                    <td>Singular</td>
+                    <td><b>I</b><br>(నేను)</td>
+                    <td><b>Me</b><br>(నన్ను / నాకు / నాతో)</td>
+                    <td><b>My</b><br>(నా యొక్క)</td>
+                    <td><b>Mine</b><br>(నాది / నావి)</td>
+                    <td><b>Myself</b><br>(నేనే)</td>
+                </tr>
+
+                <tr>
+                    <td>Plural</td>
+                    <td><b>We</b><br>(మేము / మనము)</td>
+                    <td><b>Us</b><br>(మము , మాకు, మాతో / మనల్ని , మనకు , మనతో)</td>
+                    <td><b>Our</b><br>(మా యొక్క/ మన యొక్క)</td>
+                    <td><b>Ours</b><br>(మాది ,మావి / మనది , మనవి)</td>
+                    <td><b>Ourselves</b><br>(మేమే / మనమే)</td>
+                </tr>
+
+                <!-- 2nd Person -->
+                <tr>
+                    <td rowspan="2"><b>2nd Person</b></td>
+                    <td>Singular</td>
+                    <td><b>You</b><br>(నీవు)</td>
+                    <td><b>You</b><br>(నిన్ను / నీకు / నీతో)</td>
+                    <td><b>Your</b><br>(నీ యొక్క)</td>
+                    <td><b>Yours</b><br>(నీది / నీవి)</td>
+                    <td><b>Yourself</b><br>(నీవే)</td>
+                </tr>
+
+                <tr>
+                    <td>Plural</td>
+                    <td><b>You</b><br>(మీరు)</td>
+                    <td><b>You</b><br>(మిమ్మల్ని / మీకు / మీతో)</td>
+                    <td><b>Your</b><br>(మీ యొక్క)</td>
+                    <td><b>Yours</b><br>(మీది / మీవి)</td>
+                    <td><b>Yourselves</b><br>(మీరే)</td>
+                </tr>
+
+                <!-- 3rd Person -->
+                <tr>
+                    <td rowspan="4"><b>3rd Person</b></td>
+                    <td>Singular</td>
+                    <td><b>He</b><br>(అతను)</td>
+                    <td><b>Him</b><br>(అతన్ని / అతనికి / అతనితో)</td>
+                    <td><b>His</b><br>(అతని యొక్క)</td>
+                    <td><b>His</b><br>(అతనిది)</td>
+                    <td><b>Himself</b><br>(అతనే)</td>
+                </tr>
+
+                <tr>
+                    <td>Singular</td>
+                    <td><b>She</b><br>(ఆమె)</td>
+                    <td><b>Her</b><br>(ఆమెను / ఆమెకు / ఆమెతో)</td>
+                    <td><b>Her</b><br>(ఆమె యొక్క)</td>
+                    <td><b>Hers</b><br>(ఆమెది / ఆమెవి)</td>
+                    <td><b>Herself</b><br>(ఆమెనే)</td>
+                </tr>
+
+                <tr>
+                    <td>Singular</td>
+                    <td><b>It</b><br>(అది / ఇది)</td>
+                    <td><b>It</b><br>(దాన్ని / దానికి / దాంతో)</td>
+                    <td><b>Its</b><br>(దాని యొక్క)</td>
+                    <td><b>Its</b><br>(దానిది, దాని)</td>
+                    <td><b>Itself</b><br>(అదే)</td>
+                </tr>
+
+                <tr>
+                    <td>Plural</td>
+                    <td><b>They</b><br>(వారు / వాళ్లు)</td>
+                    <td><b>Them</b><br>(వారిని, వారికి, వారితో / వాళ్లని, వాళ్లకి, వాళ్లతో)</td>
+                    <td><b>Their</b><br>(వారి యొక్క / వాళ్ల యొక్క)</td>
+                    <td><b>Theirs</b><br>(వారిది / వాళ్లది, వాళ్లవి)</td>
+                    <td><b>Themselves</b><br>(వారే / వాళ్లే)</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

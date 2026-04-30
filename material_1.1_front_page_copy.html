@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moses' Institute of Spoken English - Front Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Georgia:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@800;900&family=Dancing+Script:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            box-sizing: border-box;
+            padding: 15mm;
+            position: relative;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 210mm;
+                height: 297mm;
+                padding: 15mm;
+                page-break-after: always;
+                overflow: hidden;
+                /* Prevent any accidental extra page */
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        .border-outer {
+            border: 2px solid #000;
+            border-radius: 25px;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 8mm 10mm 15mm 10mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .quote-section {
+            margin-top: 0;
+        }
+
+        .quote-line-1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 30px;
+            font-weight: bold;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        .quote-line-2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .normal-font {
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .title-section {
+            margin-top: 10px;
+        }
+
+        .title-moses {
+            font-size: 45px;
+            font-weight: bold;
+            margin: 10px 0 0 0;
+            color: #111;
+        }
+
+        .title-institute {
+            font-size: 58px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 5px 0;
+            color: #000;
+        }
+
+        .title-of {
+            font-size: 20px;
+            font-style: italic;
+            margin: 2px 0;
+            color: #444;
+        }
+
+        .title-spoken {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 58px;
+            letter-spacing: 2px;
+            margin: 5px 0;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        .profile-section {
+            margin: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: auto;
+            max-width: 230px;
+            border-radius: 15px;
+            border: 2px solid #000;
+            object-fit: cover;
+            margin-bottom: 10px;
+            padding: 4px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-name {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000;
+            margin: 10px 0 2px 0;
+            letter-spacing: 1px;
+        }
+
+        .profile-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #b82d2d;
+            margin-bottom: 8px;
+        }
+
+        .profile-qual {
+            font-size: 17px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 2px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer-section {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .address-line {
+            font-family: 'Arial', sans-serif;
+            font-size: 17px;
+            color: #222;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .city-line {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 28px;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            color: #000;
+        }
+
+        .contact-line {
+            font-family: 'Arial', sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            color: #000;
+            line-height: 1.6;
+            margin-top: 5px;
+        }
+
+        .no-print {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 1000;
+        }
+
+        .no-print button {
+            background: #001f3f;
+            color: #B8860B;
+            border: 2px solid #B8860B;
+            padding: 10px 22px;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 40px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="border-outer">
+
+            <div class="quote-section">
+                <div class="quote-line-1">Language is the dress of thought</div>
+                <div class="quote-line-2">So, <span class="normal-font">Learn</span> it neatly and then <span
+                        class="normal-font">Speak</span> in style.</div>
+            </div>
+
+            <div class="title-section">
+                <h1 class="title-moses">MOSES'</h1>
+                <div class="title-institute">Institute</div>
+                <div class="title-of">of</div>
+                <div class="title-spoken">SPOKEN ENGLISH</div>
+            </div>
+
+            <div class="profile-section">
+                <img src="image.png" alt="Moses" class="profile-img">
+                <div class="profile-name">M. MOSES</div>
+                <div class="profile-title">Director</div>
+                <div class="profile-qual">D.C.E, B.A.(Lit), M.A.(Lit), M.A.(Pol.Science), B.Ed.</div>
+            </div>
+
+            <div class="footer-section">
+                <div class="address-line">📍 Beside YUVARAJ (SAILAJA) Theatre, Swarajya Nagar, Near TRR Ground, KANDUKUR
+                </div>
+                <div class="contact-line">
+                    📞 99631 78535 | 83090 92629 | 93925 62274<br>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="no-print">
+        <button onclick="window.print()">Download / Print PDF</button>
+    </div>
+
+</body>
+
+</html>
