@@ -236,13 +236,14 @@
             border: 1px solid black;
             padding: 6px 4px;
             text-align: center;
-            font-weight: bold;
+            font-weight: 800;
         }
 
         .pronouns-table td {
             border: 1px solid black;
             padding: 4px 4px;
             text-align: center;
+            font-weight: 800;
         }
 
         .pronouns-layout-table {
@@ -259,9 +260,9 @@
         }
 
         .person-col {
-            font-weight: bold;
+            font-weight: 800;
             width: 15%;
-            font-size: 13.5px;
+            font-size: 15px;
         }
 
         .brace-col {
@@ -269,11 +270,13 @@
             text-align: center;
             font-family: "Courier New", monospace;
             font-weight: 100;
+            padding: 0 !important;
         }
 
         .pronoun-col {
             width: 35%;
-            font-size: 13.5px;
+            font-size: 15px;
+            font-weight: 800;
         }
 
         .note-col {
@@ -417,6 +420,7 @@
                         <td class="pronoun-col"
                             style="color: blue; font-family: 'Comic Sans MS', cursive, sans-serif; font-weight: bold; font-size: 13px; padding-bottom: 2px;">
                             Subjects</td>
+                        <td class="brace-col"></td>
                         <td class="note-col"></td>
                         <td class="brace-col"></td>
                         <td class="handwritten-note"></td>
@@ -433,6 +437,7 @@
                         </td>
                         <td class="pronoun-col"><b>I</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; <span
                                 class="tel">నేను</span></td>
+                        <td class="brace-col"></td>
                         <td class="note-col">(Singular Number)</td>
                         <td class="brace-col" rowspan="2">
                             <svg width="24" height="100%" viewBox="0 0 20 100" preserveAspectRatio="none"
@@ -445,12 +450,13 @@
                     </tr>
                     <tr>
                         <td class="pronoun-col"><b>We(వి)</b> - &nbsp;&nbsp; <span class="tel">మేము, మనము</span></td>
+                        <td class="brace-col"></td>
                         <td class="note-col">(Plural Number)</td>
                     </tr>
 
                     <!-- Spacer row -->
                     <tr>
-                        <td colspan="6" style="padding: 2px 0;"></td>
+                        <td colspan="7" style="padding: 2px 0;"></td>
                     </tr>
 
                     <!-- II Person -->
@@ -465,6 +471,7 @@
                         </td>
                         <td class="pronoun-col"><b>You</b> &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; <span class="tel">నీవు,
                                 మీరు</span></td>
+                        <td class="brace-col"></td>
                         <td class="note-col">(Singular and Plural Number)</td>
                         <td class="brace-col"></td>
                         <td class="handwritten-note">Listener(s)</td>
@@ -472,7 +479,7 @@
 
                     <!-- Spacer row -->
                     <tr>
-                        <td colspan="6" style="padding: 2px 0;"></td>
+                        <td colspan="7" style="padding: 2px 0;"></td>
                     </tr>
 
                     <!-- III Person -->
@@ -482,17 +489,24 @@
                         <td class="brace-col" rowspan="4">
                             <svg width="24" height="100%" viewBox="0 0 20 100" preserveAspectRatio="none"
                                 style="display: block; margin: auto;">
-                                <path d="M 15 5 Q 5 5 5 15 L 5 45 Q 5 50 15 50 Q 5 50 5 55 L 5 85 Q 5 95 15 95"
+                                <path d="M 18 2 Q 2 2 2 12 L 2 48 Q 2 50 18 50 Q 2 50 2 52 L 2 88 Q 2 98 18 98"
                                     stroke="black" fill="none" stroke-width="3" vector-effect="non-scaling-stroke" />
                             </svg>
                         </td>
                         <td class="pronoun-col"><b>He</b> &nbsp;&nbsp;-&nbsp;&nbsp; <span class="tel">అతడు, అతను</span>
                         </td>
-                        <td class="note-col" rowspan="3" style="vertical-align: middle;">(Singular Number)</td>
                         <td class="brace-col" rowspan="3">
                             <svg width="24" height="100%" viewBox="0 0 20 100" preserveAspectRatio="none"
                                 style="display: block; margin: auto;">
                                 <path d="M 5 5 Q 15 5 15 15 L 15 45 Q 15 50 5 50 Q 15 50 15 55 L 15 85 Q 15 95 5 95"
+                                    stroke="black" fill="none" stroke-width="3" vector-effect="non-scaling-stroke" />
+                            </svg>
+                        </td>
+                        <td class="note-col" rowspan="3" style="vertical-align: middle;">(Singular Numbers)</td>
+                        <td class="brace-col" rowspan="4">
+                            <svg width="24" height="100%" viewBox="0 0 20 100" preserveAspectRatio="none"
+                                style="display: block; margin: auto;">
+                                <path d="M 2 2 Q 18 2 18 12 L 18 48 Q 18 50 2 50 Q 18 50 18 52 L 18 88 Q 18 98 2 98"
                                     stroke="black" fill="none" stroke-width="3" vector-effect="non-scaling-stroke" />
                             </svg>
                         </td>
@@ -510,8 +524,8 @@
                     <!-- Row 4 (They) -->
                     <tr>
                         <td class="pronoun-col"><b>They</b> - <span class="tel">వారు, వాళ్ళు</span></td>
-                        <td class="note-col">(Plural Number)</td>
                         <td class="brace-col"></td>
+                        <td class="note-col">(Plural Number)</td>
                     </tr>
                 </table>
 
@@ -551,12 +565,12 @@
                         <div style="padding:3px 12px;">Object</div>
                     </div>
                     <div style="margin-left: 20px; font-size: 15px; font-weight: 700;">
-                        <b>Exp:</b> He eats Fruits
+                        <b>Exp:</b> <b>He</b> eats Fruits
                     </div>
                 </div>
 
                 <div style="font-size:15px; margin:6px 0 4px 0; line-height:1.4; font-weight: 700;">
-                    <b>SUBJECT :</b> It is a part of a sentence about whom or which something is said.<br>
+                    <b>SUBJECT :</b> <b>It</b> is a part of a sentence about whom or which something is said.<br>
                     <span style="margin-left: 16px;"> Doer of an action (Or) Performer of an action.</span><br>
                     <!-- <span style="margin-left: 16px;">(Or) The heading part of a sentence.</span> -->
                     <div
@@ -577,7 +591,7 @@
                 </div>
 
                 <div style="font-size:15px; margin:4px 0 4px 0; line-height:1.4; font-weight: 700;">
-                    <b>VERB :</b> It is a word which expresses the state of doing, being and possessing.
+                    <b>VERB :</b> It is a word which expresses the state of doing, being and possessing(having).
                 </div>
 
                 <div style="font-size:15px; margin-top:6px; font-weight: bold; text-decoration: underline;">
@@ -608,26 +622,65 @@
                 </h2>
 
                 <!-- be forms table -->
-                <div
-                    style="display:flex; justify-content:space-between; font-size:13.5px; line-height:1.9; margin-bottom:6px; font-weight: 700;">
-                    <div>
-                        <b>Be = <span class="tel">ఉండుట</span></b><br>
-                        am = <span class="tel">ఉన్నాను</span><br>
-                        is = <span class="tel">ఉన్నాడు/ఉన్నది</span><br>
-                        are = <span class="tel">ఉన్నాము,ఉన్నావు,ఉన్నారు</span>
-                    </div>
-                    <div>
-                        <b>V₁ <span style="color:brown; font-style:italic;">Present Verb</span></b><br>
-                        Be<br>am<br>is<br>are
-                    </div>
-                    <div>
-                        <b>V₂ <span style="color:brown; font-style:italic;">Past Verb</span></b><br>
-                        was<br>was<br>was<br>were
-                    </div>
-                    <div>
-                        <b>V₃ <span style="color:brown; font-style:italic;">Past Participle Verb</span></b><br>
-                        been<br>been<br>been<br>been
-                    </div>
+                <div style="display:flex; justify-content:center; margin-bottom:10px; width: 100%;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; text-align: center; border: none;">
+                        <thead>
+                            <tr>
+                                <th colspan="3" style="padding: 0 10px 5px 0; vertical-align: bottom; white-space: nowrap;"></th>
+                                <th style="padding: 0 10px 5px 0; vertical-align: bottom; white-space: nowrap;"><b>V₁ <span style="color:brown;">Present Verb</span></b></th>
+                                <th style="padding: 0 10px 5px 0; vertical-align: bottom; white-space: nowrap;"><b>V₂ <span style="color:brown;">Past Verb</span></b></th>
+                                <th style="padding: 0 10px 5px 0; vertical-align: bottom; white-space: nowrap;"><b>V₃ <span style="color:brown;">Past Participle Verb</span></b></th>
+                                <th colspan="2"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Row 1: Be -->
+                            <tr>
+                                <td style="padding-right: 15px; font-weight: 900;">Be</td>
+                                <td style="padding-right: 15px;">=</td>
+                                <td class="tel" style="padding-right: 40px; font-weight: 900;">ఉండుట</td>
+                                <td style="padding-right: 15px; font-weight: 900;">Be</td>
+                                <td style="padding-right: 15px; font-weight: 900;">was</td>
+                                <td style="padding-right: 15px; font-weight: 900;">been</td>
+                                <td rowspan="4" style="padding: 0; vertical-align: top;">
+                                    <div style="width: 20px; height: 90px; margin-top: 10px;">
+                                        <svg width="20" height="100%" viewBox="0 0 20 100" preserveAspectRatio="none">
+                                            <path d="M 2 2 Q 18 2 18 12 L 18 48 Q 18 50 2 50 Q 18 50 18 52 L 18 88 Q 18 98 2 98"
+                                                stroke="black" fill="none" stroke-width="3" vector-effect="non-scaling-stroke" />
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td rowspan="4" class="tel" style="padding-left: 5px; vertical-align: middle; font-weight: 900;">ఉండుట</td>
+                            </tr>
+                            <!-- Row 2: am -->
+                            <tr>
+                                <td style="padding-right: 15px; font-weight: 900;">am</td>
+                                <td style="padding-right: 15px;">=</td>
+                                <td class="tel" style="padding-right: 40px; font-weight: 900;">ఉన్నాను</td>
+                                <td style="padding-right: 15px; font-weight: 900;">am</td>
+                                <td style="padding-right: 15px; font-weight: 900;">was</td>
+                                <td style="padding-right: 15px; font-weight: 900;">been</td>
+                            </tr>
+                            <!-- Row 3: is -->
+                            <tr>
+                                <td style="padding-right: 15px; font-weight: 900;">is</td>
+                                <td style="padding-right: 15px;">=</td>
+                                <td class="tel" style="padding-right: 40px; font-weight: 900;">ఉన్నాడు/ఉన్నది</td>
+                                <td style="padding-right: 15px; font-weight: 900;">is</td>
+                                <td style="padding-right: 15px; font-weight: 900;">was</td>
+                                <td style="padding-right: 15px; font-weight: 900;">been</td>
+                            </tr>
+                            <!-- Row 4: are -->
+                            <tr>
+                                <td style="padding-right: 15px; font-weight: 900; vertical-align: top;">are</td>
+                                <td style="padding-right: 15px; vertical-align: top;">=</td>
+                                <td class="tel" style="padding-right: 40px; font-weight: 900; line-height: 1.2;">ఉన్నాము,ఉన్నావు,<br>ఉన్నారు,ఉన్నవి</td>
+                                <td style="padding-right: 15px; font-weight: 900; vertical-align: top;">are</td>
+                                <td style="padding-right: 15px; font-weight: 900; vertical-align: top;">were</td>
+                                <td style="padding-right: 15px; font-weight: 900; vertical-align: top;">been</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <hr style="border:1px solid #ccc; margin:12px 0;">
